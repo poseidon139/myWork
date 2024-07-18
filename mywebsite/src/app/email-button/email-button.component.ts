@@ -1,24 +1,22 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { EmailButtonComponent } from "./email-button/email-button.component";
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-email-button',
   standalone: true,
-  imports: [RouterOutlet, EmailButtonComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [],
+  templateUrl: './email-button.component.html',
+  styleUrl: './email-button.component.css'
 })
-export class AppComponent {
-  title = 'Surya Vardhan';
+export class EmailButtonComponent {
   openMail(): void {
     let emailAddress = 'suryavardhan261@gmail.com';
     let subject = 'Hello';
-    let body = 'I want to receive an email!';
+    let body = 'Your Query here !';
     
     let mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     // Open the user's default email client
     window.open(mailtoLink);
   }
+
 }
