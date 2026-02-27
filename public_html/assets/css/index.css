@@ -11632,3 +11632,77 @@ pre {
 .section.bg-gray {
   background: white;
 }
+/* dark / light theme support */
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+body.dark-theme .navbar,
+body.dark-theme .page-footer {
+  background-color: #1e1e1e;
+}
+body.dark-theme .card,
+body.dark-theme .custom-card,
+body.dark-theme .bg-gray {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0;
+}
+body.dark-theme a {
+  color: var(--cyan);
+}
+body.dark-theme a:hover {
+  color: var(--blue);
+}
+body.dark-theme .btn {
+  border-color: #444;
+}
+/* extend dark theme to sections */
+body.dark-theme .section,
+body.dark-theme .section.bg-white,
+body.dark-theme .section.bg-gray {
+  background: #121212 !important;
+}
+body.dark-theme .section:nth-child(even) {
+  background: #181818 !important;
+}
+/* dark theme adjustments for contact form */
+body.dark-theme .contact .form {
+  background: transparent;
+}
+body.dark-theme .contact .form-control,
+body.dark-theme .contact textarea {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border-color: #444;
+}
+body.dark-theme .contact .form-control::placeholder,
+body.dark-theme textarea::placeholder {
+  color: #bbb;
+}
+body.dark-theme .contact .btn-primary {
+  background-color: #3a3a3a;
+  border-color: #555;
+}
+/* dark theme for contact container itself */
+body.dark-theme .contact {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  box-shadow: 1px 2px 6px rgba(0,0,0,0.7);
+}
+body.dark-theme .contact .form {
+  border-right: 1px solid #444;
+}
+body.dark-theme .contact .contact-infos .item div {
+  border-bottom: 1px solid #444;
+}
+body.dark-theme .contact .contact-infos .item i {
+  border-color: #555;
+}
+/* dark theme for embedded map */
+body.dark-theme #map {
+  background: #1e1e1e;
+}
+body.dark-theme #map iframe {
+  filter: invert(0.9) hue-rotate(180deg);
+  opacity: 0.95;
+}

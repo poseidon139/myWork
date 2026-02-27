@@ -18,6 +18,15 @@
     <!-- End Google Tag Manager -->
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40">
+    <script>
+      // apply persisted theme ASAP to avoid flash
+      (function(){
+        var t = localStorage.getItem('theme');
+        if (t === 'dark') {
+          document.body.classList.add('dark-theme');
+        }
+      })();
+    </script>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWWWNGMQ"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -47,6 +56,10 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <!-- theme toggle -->
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-sm btn-outline-secondary" title="Toggle dark/light mode">🌙</button>
                     </li>
                 </ul>
             </div>
