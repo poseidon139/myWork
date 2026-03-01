@@ -11706,3 +11706,31 @@ body.dark-theme #map iframe {
   filter: invert(0.9) hue-rotate(180deg);
   opacity: 0.95;
 }
+
+/* Added custom styles */
+.badge-outline-primary {
+  transition: all 0.3s ease;
+  font-weight: normal;
+  background-color: transparent;
+}
+.badge-outline-primary:hover {
+  background-color: var(--primary);
+  cursor: default;
+}
+
+/* Service Card Hover */
+.custom-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.custom-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Portfolio Hover */
+.img-wrapper {
+  transition: transform 0.3s ease;
+}
+.img-wrapper:hover {
+  transform: scale(1.02);
+}
+
