@@ -5,16 +5,18 @@ $(document).ready(function(){
 	$(".nav-link").on('click', function(event) {
 
     	if (this.hash !== "") {
-
-			event.preventDefault();
-
 			var hash = this.hash;
 
-			$('html, body').animate({
-				scrollTop: $(hash).offset().top
-			}, 700, function(){
-				window.location.hash = hash;
-			});
+			// Only prevent default and smooth scroll if the target element exists on the current page
+			if ($(hash).length) {
+				event.preventDefault();
+
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 700, function(){
+					window.location.hash = hash;
+				});
+			}
       	} 
     });
 
