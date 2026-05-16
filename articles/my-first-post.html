@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="Surya Vardhan - Full Stack Developer & DevOps Engineer specializing in Java, Python, AWS, and Machine Learning.">
+    <meta name="author" content="Surya">
+    <title>How to Effectively Use AI in Software Engineering - Surya Vardhan</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PWWWNGMQ');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40">
+    <script>
+        // apply persisted theme ASAP to avoid flash
+        (function () {
+            var t = localStorage.getItem('theme');
+            if (t === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        })();
+    </script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWWWNGMQ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Page navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><img src="../assets/imgs/logoNew.svg" alt="Surya Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#service">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#contact">Contact</a>
+                    </li>
+                    <!-- theme toggle -->
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-sm btn-outline-secondary"
+                            title="Toggle dark/light mode">🌙</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End of page navibation -->
+
+    <!-- Article Header -->
+    <header class="header pb-5 pt-5 mt-5">
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8 text-center">
+                    <h2 class="h6 subtitle mb-3">Blog Article</h2>
+                    <h1 class="h3 title mb-4">How to Effectively Use AI in Software Engineering</h1>
+                    <div class="d-flex justify-content-center align-items-center mb-4">
+                        <img src="../assets/imgs/avatarNew.jpg" alt="Author" class="rounded-circle mr-3" style="width: 50px; height: 50px; object-fit: cover; border: 2px solid var(--border-glass);">
+                        <div class="text-left">
+                            <p class="mb-0 font-weight-bold" style="color: var(--text-primary);">Surya Vardhan</p>
+                            <p class="mb-0 small text-muted">May 16, 2026 &middot; 5 min read</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End of Article Header -->
+
+    <!-- Article Content -->
+    <section class="section pt-0">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8">
+                    <div class="article-body" style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;">
+                        
+                        <p>Artificial Intelligence is no longer just a buzzword—it's a critical tool in a modern software engineer's arsenal. From writing boilerplate code to identifying complex bugs, integrating AI into your daily workflow can dramatically improve productivity and code quality. In this article, I'll share my top strategies for effectively using AI in software engineering.</p>
+
+                        <h3 class="h5 mt-5 mb-3" style="color: var(--text-primary);">1. AI as a Pair Programmer</h3>
+                        <p>Think of AI assistants like GitHub Copilot or ChatGPT as your pair programmers. Don't rely on them to architect your entire system, but use them to write repetitive boilerplate, generate unit tests, or quickly implement standard algorithms. Always review the code they generate to ensure it aligns with your project's specific context and security standards.</p>
+
+                        <h3 class="h5 mt-5 mb-3" style="color: var(--text-primary);">2. Automated Code Reviews</h3>
+                        <p>One of the most powerful applications of AI is automating the initial pass of code reviews. By integrating AI into your CI/CD pipeline, you can catch stylistic issues, potential bugs, and security vulnerabilities before a human reviewer even looks at the Pull Request. This saves valuable engineering time and allows human reviewers to focus on architecture and business logic.</p>
+
+                        <div class="p-4 rounded mb-4" style="background: var(--bg-card); border: 1px solid var(--border-glass);">
+                            <h4 class="h6 mb-3" style="color: var(--text-primary);">Key Areas for AI Assistance:</h4>
+                            <ul class="mb-0">
+                                <li class="mb-2"><strong>Code Generation:</strong> Boilerplate, regex, and standard functions.</li>
+                                <li class="mb-2"><strong>Debugging:</strong> Analyzing stack traces and suggesting fixes.</li>
+                                <li class="mb-2"><strong>Documentation:</strong> Generating docstrings and technical docs automatically.</li>
+                                <li class="mb-0"><strong>Testing:</strong> Writing exhaustive unit and integration tests.</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="h5 mt-5 mb-3" style="color: var(--text-primary);">3. Understanding the Limitations</h3>
+                        <p>While AI is incredibly powerful, it's not infallible. It can "hallucinate" APIs that don't exist, introduce subtle security flaws, or generate highly inefficient code. The key to effectively using AI is treating its output as a suggestion, not a final solution. Your domain expertise and understanding of the system's architecture are still paramount.</p>
+
+                        <p class="mt-5">By embracing AI as a productivity enhancer rather than a replacement, you can elevate your software engineering to the next level. If you're interested in learning more about how I implement these tools, feel free to <a href="../index.html#contact" class="text-primary font-weight-bold">reach out</a>.</p>
+                    </div>
+
+                    <div class="mt-5 pt-4 border-top" style="border-color: var(--border-glass) !important;">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="../index.html#blog" class="btn btn-outline-primary btn-sm"><i class="ti-arrow-left mr-2"></i> Back to Blog</a>
+                            <div class="socials">
+                                <span class="mr-3 small text-muted">Share:</span>
+                                <a class="social-item m-0" href="#" style="width: 35px; height: 35px;"><i class="ti-twitter"></i></a>
+                                <a class="social-item m-0" href="#" style="width: 35px; height: 35px;"><i class="ti-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Article Content -->
+
+    <!-- Page Footer -->
+    <footer class="page-footer mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-6">
+                    <p>Copyright
+                        <script>document.write(new Date().getFullYear())</script> &copy; <a
+                            href="javascript:void(0)">Surya</a>
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="socials">
+                        <a class="social-item" href="https://www.linkedin.com/in/surya-vardhan-23ab3b232/"><i
+                                class="ti-linkedin"></i></a>
+                        <a class="social-item" href="https://www.reddit.com/user/surya0311/"><i
+                                class="ti-reddit"></i></a>
+                        <a class="social-item" href="https://github.com/poseidon139"><i class="ti-github"></i></a>
+                        <a class="social-item" href="https://x.com/SuryaVardh21773"><i class="ti-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End of page footer -->
+
+    <!-- core  -->
+    <script src="../assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="../assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <!-- bootstrap 3 affix -->
+    <script src="../assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <script src="../assets/js/index.js"></script>
+
+</body>
+
+</html>
