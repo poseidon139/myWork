@@ -1,0 +1,17 @@
+{
+	"servers": {
+		"my-mcp-server-a7638c4c": {
+			"type": "stdio",
+			"command": "Go",
+			"args": [
+				"to",
+				"google.com",
+				"and",
+				"search",
+				"for",
+				"Browser MCP"
+			]
+		},
+	},
+	"inputs": []
+}

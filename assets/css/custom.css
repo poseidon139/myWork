@@ -69,11 +69,13 @@ p {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-glass);
-  padding: 1rem 0;
+  padding: 0.7rem 0;
   transition: all 0.3s ease;
 }
 
 .navbar-brand img {
+  height: 38px;
+  width: auto;
   filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.6));
 }
 
@@ -112,7 +114,7 @@ p {
 
 /* Header Section */
 .header {
-  padding-top: 120px;
+  padding-top: 100px;
   background: var(--header-grad);
 }
 
@@ -338,3 +340,17 @@ p {
 }
 
 /* Theme toggle restored */
+
+/* Subpage headers (blog, articles) should not take full viewport height */
+.header:not(#home) {
+  height: auto !important;
+  min-height: 0 !important;
+  padding-top: 120px !important;
+  padding-bottom: 50px !important;
+  border-bottom: none !important;
+}
+
+.header:not(#home) .container {
+  height: auto !important;
+  min-height: 0 !important;
+}
