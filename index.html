@@ -7,7 +7,25 @@
     <meta name="description"
         content="Surya Vardhan - Full Stack Developer & DevOps Engineer specializing in Java, Python, AWS, and Machine Learning.">
     <meta name="author" content="Surya">
-    <title> Surya Vardhan</title>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://poseidon139.github.io/myWork/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Surya Vardhan | Software Developer">
+    <meta property="og:description" content="Portfolio of Surya Vardhan, a software developer specializing in web development, DevOps, cloud, and machine learning.">
+    <meta property="og:url" content="https://poseidon139.github.io/myWork/">
+    <meta name="twitter:card" content="summary">
+    <title>Surya Vardhan | Software Developer</title>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Surya Vardhan",
+        "url": "https://poseidon139.github.io/myWork/",
+        "jobTitle": "Software Developer",
+        "sameAs": ["https://github.com/poseidon139", "https://www.linkedin.com/in/surya-vardhan-23ab3b232/", "https://x.com/SuryaVardh21773"],
+        "knowsAbout": ["Java", "Python", "AWS", "Web Development", "DevOps", "Machine Learning"]
+    }
+    </script>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/index.css">
@@ -42,7 +60,7 @@
     <!-- Page navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="assets/imgs/logoNew.svg" alt="Surya Logo"></a>
+            <a class="navbar-brand" href="#home"><img src="assets/imgs/logoNew.svg" alt="Surya Logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -71,7 +89,8 @@
                     <!-- theme toggle -->
                     <li class="nav-item">
                         <button id="theme-toggle" class="btn btn-sm btn-outline-secondary"
-                            title="Toggle dark/light mode">🌙</button>
+                            title="Toggle dark/light mode" aria-label="Toggle dark/light mode"><span class="theme-icon"
+                                aria-hidden="true">&#9790;</span></button>
                     </li>
                 </ul>
             </div>
@@ -83,8 +102,8 @@
     <header class="header" id="home">
         <div class="container">
             <div class="infos">
-                <h2 class="h6 subtitle">hello,I'm</h2>
-                <h1 class="h6 title">Surya Vardhan</h1>
+                <p class="eyebrow">Hello, I'm</p>
+                <h1 class="title">Surya Vardhan</h1>
                 <p>Software Developer</p>
                 <div class="buttons pt-3">
                     <a href="#contact" class="btn btn-primary rounded">HIRE ME</a>
@@ -98,9 +117,6 @@
                     <a class="social-item" href="https://x.com/SuryaVardh21773"><i class="ti-twitter"></i></a>
                 </div>
             </div>
-            <div class="img-holder">
-                <img src="assets/imgs/man.svg" alt="Surya Vardhan Illustration">
-            </div>
         </div>
 
 
@@ -111,12 +127,8 @@
     <section id="about" class="section mt-3">
         <div class="container mt-5">
             <div class="row text-center text-md-left">
-                <div class="col-md-3">
-                    <img src="assets/imgs/avatarNew.svg" alt="Developer Avatar"
-                        class="img-thumbnail mb-4">
-                </div>
-                <div class="pl-md-4 col-md-9">
-                    <h2 class="h6 title">About Me</h2>
+                <div class="col-md-9 mx-auto">
+                    <h2 class="title">About Me</h2>
                     <p class="subtitle">Software Developer</p>
                     <p>I'm a software developer from India, with a passion for building scalable,
                         efficient, and easy-to-use software systems. I have around 3 years of experience in software
@@ -134,51 +146,15 @@
     <!-- Service section -->
     <section id="service" class="section">
         <div class="container text-center">
-            <h2 class="h6 subtitle">Service</h2>
-            <h3 class="h6 section-title mb-4">What I Do</h3>
+            <p class="eyebrow">Services</p>
+            <h2 class="section-title mb-4">What I Do</h2>
             <p class="mb-5 pb-4">I do application and web development, and also well-versed in DevOps things.</p>
-            <div class="row">
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-desktop"></i>
-                            <h5>Web Development</h5>
-                            <p class="text-muted small">Building scalable backends and engaging frontends using modern
-                                frameworks.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-shield"></i>
-                            <h5>Cyber Security </h5>
-                            <p class="text-muted small">Securing infrastructure and performing automated vulnerability
-                                assessments.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-mobile"></i>
-                            <h5>App development</h5>
-                            <p class="text-muted small">Creating performant mobile applications for Android and
-                                cross-platform devices.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-bar-chart"></i>
-                            <h5>Analytics</h5>
-                            <p class="text-muted small">Implementing real-time data tracking and business intelligence
-                                dashboards.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ul class="service-list">
+                <li><i class="icon ti-desktop"></i><div><h3>Web Development</h3><p>Building scalable backends and engaging frontends using modern frameworks.</p></div></li>
+                <li><i class="icon ti-shield"></i><div><h3>Cyber Security</h3><p>Securing infrastructure and performing automated vulnerability assessments.</p></div></li>
+                <li><i class="icon ti-mobile"></i><div><h3>App Development</h3><p>Creating performant mobile applications for Android and cross-platform devices.</p></div></li>
+                <li><i class="icon ti-bar-chart"></i><div><h3>Analytics</h3><p>Implementing real-time data tracking and business intelligence dashboards.</p></div></li>
+            </ul>
         </div>
     </section>
     <!-- End of Sectoin -->
@@ -186,42 +162,26 @@
     <!-- Skills section -->
     <section class="section">
         <div class="container text-center">
-            <h2 class="h6 subtitle">Skills</h2>
-            <h3 class="h6 section-title mb-4">Why Choose me</h3>
+            <p class="eyebrow">Skills</p>
+            <h2 class="section-title mb-4">Why Choose Me</h2>
             <p class="mb-5 pb-4">I am a passionate web developer with a love for creating innovative and efficient
                 solutions.</p>
             <div class="row justify-content-center text-center">
                 <div class="col-12 mt-4">
-                    <div class="d-flex flex-wrap justify-content-center" style="gap: 10px;">
-                        <span
-                            class="badge badge-outline-primary border border-primary text-primary px-3 py-2 rounded-pill h6 mb-0">Java</span>
-                        <span
-                            class="badge badge-outline-primary border border-primary text-primary px-3 py-2 rounded-pill h6 mb-0">C/C++</span>
-                        <span
-                            class="badge badge-outline-primary border border-primary text-primary px-3 py-2 rounded-pill h6 mb-0">Python</span>
-                        <span
-                            class="badge badge-outline-primary border border-primary text-primary px-3 py-2 rounded-pill h6 mb-0">Javascript</span>
-                        <span
-                            class="badge badge-outline-primary border border-primary text-primary px-3 py-2 rounded-pill h6 mb-0">Docker</span>
-                        <span
-                            class="badge badge-outline-primary border border-primary text-primary px-3 py-2 rounded-pill h6 mb-0">Kubernetes</span>
-                        <span
-                            class="badge badge-outline-primary border border-primary text-primary px-3 py-2 rounded-pill h6 mb-0">AWS</span>
-                        <span
-                            class="badge badge-outline-primary border border-primary text-primary px-3 py-2 rounded-pill h6 mb-0">Jenkins</span>
-                        <span
-                            class="badge badge-outline-primary border border-primary text-primary px-3 py-2 rounded-pill h6 mb-0">Spring
-                            Boot</span>
-                        <span
-                            class="badge badge-outline-primary border border-primary text-primary px-3 py-2 rounded-pill h6 mb-0">Android
-                            Studio</span>
-                        <span
-                            class="badge badge-outline-primary border border-primary text-primary px-3 py-2 rounded-pill h6 mb-0">AI
-                            and Machine Learning</span>
-                        <span
-                            class="badge badge-outline-primary border border-primary text-primary px-3 py-2 rounded-pill h6 mb-0">Node
-                            js and Express</span>
-                    </div>
+                    <ul class="skills-list">
+                        <li>Java</li>
+                        <li>C/C++</li>
+                        <li>Python</li>
+                        <li>Javascript</li>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>AWS</li>
+                        <li>Jenkins</li>
+                        <li>Spring Boot</li>
+                        <li>Android Studio</li>
+                        <li>AI and Machine Learning</li>
+                        <li>Node.js and Express</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -231,82 +191,19 @@
     <!-- Portfolio section -->
     <section id="portfolio" class="section">
         <div class="container text-center">
-            <h2 class="h6 subtitle">Portfolio</h2>
-            <h3 class="h6 section-title mb-4">Check My Wonderful Works</h3>
+            <p class="eyebrow">Portfolio</p>
+            <h2 class="section-title mb-4">Selected Work</h2>
             <p class="mb-5 pb-4">As a software engineer, I have worked on a wide range of projects from web development
                 to mobile apps. <br> Some of my notable projects include a web crawler, a chatbot, a web scraper, a
                 machine learning model, and a mobile app.</p>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/lanChat.jpg" alt="LanChat software screenshot">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>LAN chat software</h5>
-                                <p class="small text-light">Java, Sockets</p>
-                                <a href="https://github.com/poseidon139/lanChat"><i class="ti-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/featurePhone.jpg"
-                            alt="Weather updates on feature phone project screenshot">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Weather updates on feature Phone</h5>
-                                <p class="small text-light">Node.js, SMS API</p>
-                                <a href="https://github.com/poseidon139/weatherUpdates"><i class="ti-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/AiPrReview.jpg" alt="AI PR Review tool screenshot">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Merge Request review from an AI</h5>
-                                <p class="small text-light">Python, OpenAI, GitHub API</p>
-                                <a href="https://github.com/poseidon139/aiPRReview"><i class="ti-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/faceAntiSpoofing.jpg"
-                            alt="Anti-face Spoofing software snippet">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Anti-face Spoofing software</h5>
-                                <p class="small text-light">Python, OpenCV, Machine Learning</p>
-                                <a href="https://github.com/poseidon139/aniFaceSpoofing"><i class="ti-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/ToDoList.jpg" alt="To Do List frontend project">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Full-Stack Task Manager</h5>
-                                <p class="small text-light">React, Node.js, Express</p>
-                                <a href="https://github.com/poseidon139/todoList"><i class="ti-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/PipelineQualityControl.jpg"
-                            alt="Pipeline quality control charts">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Integrating Quality control through CI pipeline</h5>
-                                <p class="small text-light">Jenkins, Docker, SonarQube</p>
-                                <a href="https://github.com/poseidon139/qAInCICD"><i class="ti-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ul class="project-list">
+                <li><span>LAN chat software</span><small>Java, Sockets</small><a href="https://github.com/poseidon139/lanChat">View on GitHub <i class="ti-arrow-right"></i></a></li>
+                <li><span>Weather updates on feature phone</span><small>Node.js, SMS API</small><a href="https://github.com/poseidon139/weatherUpdates">View on GitHub <i class="ti-arrow-right"></i></a></li>
+                <li><span>AI pull request review</span><small>Python, OpenAI, GitHub API</small><a href="https://github.com/poseidon139/aiPRReview">View on GitHub <i class="ti-arrow-right"></i></a></li>
+                <li><span>Anti-face spoofing software</span><small>Python, OpenCV, Machine Learning</small><a href="https://github.com/poseidon139/aniFaceSpoofing">View on GitHub <i class="ti-arrow-right"></i></a></li>
+                <li><span>Full-stack task manager</span><small>React, Node.js, Express</small><a href="https://github.com/poseidon139/todoList">View on GitHub <i class="ti-arrow-right"></i></a></li>
+                <li><span>CI pipeline quality control</span><small>Jenkins, Docker, SonarQube</small><a href="https://github.com/poseidon139/qAInCICD">View on GitHub <i class="ti-arrow-right"></i></a></li>
+            </ul>
 
         </div>
     </section>
@@ -315,8 +212,8 @@
     <!-- Blog section -->
     <section id="blog" class="section">
         <div class="container text-center">
-            <h2 class="h6 subtitle">Blog</h2>
-            <h3 class="h6 section-title mb-4">Latest Articles</h3>
+            <p class="eyebrow">Blog</p>
+            <h2 class="section-title mb-4">Latest Articles</h2>
             <p class="mb-4 pb-2">Read my latest thoughts, tutorials, and insights on software development and technology.</p>
             <div id="recent-articles" class="row text-left">
                 <!-- Articles will be injected here by Javascript -->
@@ -339,20 +236,9 @@
     <!-- Hire me section -->
     <section class="bg-gray p-0 section">
         <div class="container">
-            <div class="card bg-primary">
-                <div class="card-body text-light">
-                    <div class="row align-items-center">
-                        <div class="col-sm-9 text-center text-sm-left">
-                            <h5 class="mt-3">Hire Me For Your Project</h5>
-                            <p class="mb-3">Looking for a skilled developer to bring your ideas to life? Let's
-                                collaborate and make your project a success!</p>
-                        </div>
-                        <div class="col-sm-3 text-center text-sm-right">
-                            <button class="btn btn-light rounded" onclick="window.location.href='#contact'">Hire
-                                Me!</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="hire-block">
+                <div><h2>Hire Me For Your Project</h2><p>Looking for a skilled developer to bring your ideas to life? Let's collaborate and make your project a success.</p></div>
+                <a class="btn btn-primary" href="#contact">Hire Me</a>
             </div>
         </div>
     </section>
@@ -361,14 +247,14 @@
     <!-- Contact Section -->
     <section id="contact" class="position-relative section">
         <div class="container text-center">
-            <h2 class="h6 subtitle">Contact</h2>
-            <h3 class="h6 section-title mb-4">Get In Touch With Me</h3>
+            <p class="eyebrow">Contact</p>
+            <h2 class="section-title mb-4">Get In Touch With Me</h2>
             <p class="mb-5 pb-4">I'd love to hear from you. Please feel free to contact me if you have any questions,
                 suggestions or just want to say hi.</p>
             <div class="contact text-left">
                 <div class="form">
-                    <h4 class="h6 subtitle">Available 24/7</h4>
-                    <h5 class="h6 section-title mb-4">Get In Touch</h5>
+                    <p class="eyebrow">Available 24/7</p>
+                    <h3 class="section-title mb-4">Get In Touch</h3>
                     <form action="https://formspree.io/f/mzzzkrlk" method="POST">
                         <div class="form-group">
                             <input type="email" class="form-control" name="_replyto" id="exampleInputEmail1"
@@ -391,7 +277,8 @@
                         </div>
                     </div>
                     <div class="item">
-                        <i class="ti-email" onclick="window.location.href='mailto:suryavardhan261@gmail.com'"></i>
+                        <a href="mailto:suryavardhan261@gmail.com" aria-label="Email Surya"><i class="ti-email"
+                            aria-hidden="true"></i></a>
                         <div class="mb-0">
                             <h5>Email Address</h5>
                             <p>suryavardhan261@gmail.com</p>
@@ -399,9 +286,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="map">
-            <iframe src="https://snazzymaps.com/embed/61257"></iframe>
         </div>
     </section>
     <!-- End of Contact Section -->
@@ -413,7 +297,7 @@
                 <div class="col-sm-6">
                     <p>Copyright
                         <script>document.write(new Date().getFullYear())</script> &copy; <a
-                            href="javascript:void(0)">Surya</a>
+                            href="#home">Surya</a>
                     </p>
                 </div>
                 <div class="col-sm-6">
@@ -463,16 +347,12 @@
                     recent.forEach(article => {
                         const card = `
                             <div class="col-md-4 mb-4">
-                                <div class="card border-0 shadow-sm h-100" style="border-radius: 12px; background: var(--bg-card); transition: transform 0.2s;">
-                                    <div class="card-body p-4 d-flex flex-column">
-                                        <p class="text-primary small font-weight-bold mb-2">${article.date}</p>
-                                        <h5 class="card-title mb-3"><a href="${article.filename}" class="text-dark" style="text-decoration: none; font-weight: 700;">${article.title}</a></h5>
-                                        <p class="card-text flex-grow-1 text-muted" style="font-size: 0.95rem;">${article.description}</p>
-                                        <div class="mt-3">
-                                            <a href="${article.filename}" class="text-primary font-weight-bold" style="text-decoration: none;">Read More &rarr;</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <article class="blog-item">
+                                    <p class="eyebrow">${article.date}</p>
+                                    <h3><a href="${article.filename}">${article.title}</a></h3>
+                                    <p>${article.description}</p>
+                                    <a href="${article.filename}">Read More <i class="ti-arrow-right"></i></a>
+                                </article>
                             </div>
                         `;
                         container.innerHTML += card;

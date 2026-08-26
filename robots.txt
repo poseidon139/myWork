@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /articles/article-template.html
+
+Sitemap: https://poseidon139.github.io/myWork/sitemap.xml

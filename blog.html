@@ -7,7 +7,17 @@
     <meta name="description"
         content="Surya Vardhan - All Blog Articles">
     <meta name="author" content="Surya">
-    <title>Blog - Surya Vardhan</title>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://poseidon139.github.io/myWork/blog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Software Development Blog | Surya Vardhan">
+    <meta property="og:description" content="Software development, DevOps, cloud, and machine learning articles by Surya Vardhan.">
+    <meta property="og:url" content="https://poseidon139.github.io/myWork/blog.html">
+    <meta name="twitter:card" content="summary">
+    <title>Software Development Blog | Surya Vardhan</title>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Blog","name":"Surya Vardhan Software Development Blog","url":"https://poseidon139.github.io/myWork/blog.html","author":{"@type":"Person","name":"Surya Vardhan"}}
+    </script>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/index.css">
@@ -67,7 +77,8 @@
                     <!-- theme toggle -->
                     <li class="nav-item">
                         <button id="theme-toggle" class="btn btn-sm btn-outline-secondary"
-                            title="Toggle dark/light mode">🌙</button>
+                            title="Toggle dark/light mode" aria-label="Toggle dark/light mode"><span class="theme-icon"
+                                aria-hidden="true">&#9790;</span></button>
                     </li>
                 </ul>
             </div>
@@ -79,7 +90,7 @@
     <header class="header pb-3 pt-3">
         <div class="container mt-2">
             <div class="row justify-content-center">
-                <div class="col-md-10 col-lg-8 text-center">
+                <div class="col-12 text-left blog-page-header">
                     <h1 class="h3 title mb-4">All Articles</h1>
                     <p class="text-muted">Explore all my writing on software development, tech, and more.</p>
                 </div>
@@ -108,7 +119,7 @@
                 <div class="col-sm-6">
                     <p>Copyright
                         <script>document.write(new Date().getFullYear())</script> &copy; <a
-                            href="javascript:void(0)">Surya</a>
+                            href="index.html#home">Surya</a>
                     </p>
                 </div>
                 <div class="col-sm-6">
@@ -148,16 +159,12 @@
                     articles.forEach(article => {
                         const card = `
                             <div class="col-md-4 mb-4">
-                                <div class="card border-0 shadow-sm h-100" style="border-radius: 12px; background: var(--bg-card); transition: transform 0.2s;">
-                                    <div class="card-body p-4 d-flex flex-column">
-                                        <p class="text-primary small font-weight-bold mb-2">${article.date}</p>
-                                        <h5 class="card-title mb-3"><a href="${article.filename}" class="text-dark" style="text-decoration: none; font-weight: 700;">${article.title}</a></h5>
-                                        <p class="card-text flex-grow-1 text-muted" style="font-size: 0.95rem;">${article.description}</p>
-                                        <div class="mt-3">
-                                            <a href="${article.filename}" class="text-primary font-weight-bold" style="text-decoration: none;">Read More &rarr;</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <article class="blog-item">
+                                    <p class="eyebrow">${article.date}</p>
+                                    <h2><a href="${article.filename}">${article.title}</a></h2>
+                                    <p>${article.description}</p>
+                                    <a href="${article.filename}">Read More <i class="ti-arrow-right"></i></a>
+                                </article>
                             </div>
                         `;
                         container.innerHTML += card;

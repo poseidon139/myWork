@@ -26,7 +26,7 @@ const articles = files.map(file => {
 
     // Extract image (first image inside article-body)
     const imgMatch = content.match(/<div class="article-body"[^>]*>[\s\S]*?<img[^>]*src="([^"]+)"/i) || content.match(/<img[^>]*src="([^"]+)"/i);
-    let image = imgMatch ? imgMatch[1] : 'assets/imgs/avatarNew.svg'; // default fallback image
+    let image = imgMatch ? imgMatch[1] : '';
     
     // Fix image path if it starts with ../ since we access from root
     if (image.startsWith('../')) {

@@ -24,10 +24,10 @@ $(document).ready(function(){
 	function applyTheme(theme) {
 		if (theme === 'dark') {
 			$('body').addClass('dark-theme');
-			$('#theme-toggle').text('☀️');
+			$('#theme-toggle').html('<span class="theme-icon" aria-hidden="true">&#9728;</span>');
 		} else {
 			$('body').removeClass('dark-theme');
-			$('#theme-toggle').text('🌙');
+			$('#theme-toggle').html('<span class="theme-icon" aria-hidden="true">&#9790;</span>');
 		}
 		localStorage.setItem('theme', theme);
 	}
