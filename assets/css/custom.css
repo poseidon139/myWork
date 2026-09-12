@@ -639,7 +639,7 @@ h6, .h6 {
 
 .project-list li {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) auto;
+  grid-template-columns: 320px 1fr auto;
   gap: 1.5rem;
   align-items: center;
   padding: 1rem 0;
@@ -658,6 +658,7 @@ h6, .h6 {
 .project-list li a {
   white-space: nowrap;
   font-size: 0.875rem;
+  justify-self: end;
 }
 
 .hire-block {
@@ -724,6 +725,7 @@ h6, .h6 {
 
   .project-list li a {
     white-space: normal;
+    justify-self: start;
   }
 
   .hire-block {

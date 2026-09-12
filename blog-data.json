@@ -1,5 +1,13 @@
 [
   {
+    "filename": "articles/city-simulator.html",
+    "title": "Exploring Roam The City: A Virtual City Game on a Real-World Map",
+    "date": "September 12, 2026",
+    "image": "assets/imgs/logoNew.svg",
+    "description": "Imagine stepping into an interactive virtual map of a real-world city, navigating through different neighborhoods, and striking up spontaneous conv...",
+    "timestamp": 1789151400000
+  },
+  {
     "filename": "articles/my-first-post.html",
     "title": "How to Effectively Use AI in Software Engineering",
     "date": "May 16, 2026",
