@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="../assets/css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="stylesheet" href="../assets/css/custom.css">
+    <!-- Material Web (M3) Web Components -->
+    <script type="module" src="../assets/js/material-web.bundle.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MED0CTB93M"></script>
     <script>
@@ -64,11 +67,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html#contact">Contact</a>
                     </li>
-                    <!-- theme toggle -->
-                    <li class="nav-item">
-                        <button id="theme-toggle" class="btn btn-sm btn-outline-secondary"
-                            title="Toggle dark/light mode" aria-label="Toggle dark/light mode"><span class="theme-icon"
-                                aria-hidden="true">&#9790;</span></button>
+                    <!-- Material Web theme toggle -->
+                    <li class="nav-item ml-lg-2">
+                        <md-icon-button id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+                            <md-icon id="theme-icon">dark_mode</md-icon>
+                        </md-icon-button>
                     </li>
                 </ul>
             </div>
@@ -108,7 +111,8 @@
                         <h2 class="mt-5 mb-3" style="color: var(--text-primary);">1. Stepping Into the City</h2>
                         <p>Getting started is instant and seamless. Users create an account, log into the platform, and jump straight into the virtual environment. As soon as you enter, you become part of a living digital map where real people interact and explore alongside you.</p>
 
-                        <div class="p-4 rounded mb-4" style="background: var(--bg-card); border: 1px solid var(--border-glass);">
+                        <div class="p-4 rounded mb-4 m3-surface">
+                            <md-elevation></md-elevation>
                             <h3 class="mb-3" style="color: var(--text-primary);">What You Can Experience:</h3>
                             <ul class="mb-0">
                                 <li class="mb-2"><strong>Real-World Map Navigation:</strong> Explore interconnected city zones mapped directly onto real-world locations.</li>
@@ -127,14 +131,23 @@
                         <p class="mt-5">Ready to explore? Jump into the live interactive map at <a href="https://roamthecity.com" target="_blank" rel="noopener noreferrer" class="text-primary font-weight-bold">roamthecity.com</a>, or head back to my <a href="../index.html#portfolio" class="text-primary font-weight-bold">Portfolio</a> to check out more projects!</p>
                     </div>
 
-                    <div class="mt-5 pt-4 border-top" style="border-color: var(--border-glass) !important;">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <a href="../index.html#blog" class="btn btn-outline-primary btn-sm"><i class="ti-arrow-left mr-2"></i> Back to Blog</a>
-                            <div class="socials">
-                                <span class="mr-3 small text-muted">Share:</span>
-                                <a class="social-item m-0" href="#" onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title), '_blank'); return false;" style="width: 35px; height: 35px;" title="Share on Twitter/X"><i class="ti-twitter"></i></a>
-                                <a class="social-item m-0" href="#" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href), '_blank'); return false;" style="width: 35px; height: 35px;" title="Share on LinkedIn"><i class="ti-linkedin"></i></a>
-                            </div>
+                    <md-divider class="my-4"></md-divider>
+
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                        <md-outlined-button href="../blog.html">
+                            <md-icon slot="icon">arrow_back</md-icon>
+                            All Articles
+                        </md-outlined-button>
+                        <div class="d-flex align-items-center flex-wrap gap-2">
+                            <span class="mr-2 small text-muted">Share:</span>
+                            <md-filled-tonal-button onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title), '_blank');">
+                                <md-icon slot="icon">share</md-icon>
+                                Share on X
+                            </md-filled-tonal-button>
+                            <md-filled-tonal-button onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href), '_blank');">
+                                <md-icon slot="icon">share</md-icon>
+                                Share on LinkedIn
+                            </md-filled-tonal-button>
                         </div>
                     </div>
                 </div>
@@ -154,6 +167,11 @@
         </div>
     </footer>
     <!-- End of page footer -->
+
+    <!-- Back to top FAB -->
+    <md-fab id="back-to-top" size="medium" aria-label="Scroll to top" class="back-to-top-fab" title="Scroll to top">
+        <md-icon slot="icon">arrow_upward</md-icon>
+    </md-fab>
 
     <script src="../assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="../assets/vendors/bootstrap/bootstrap.bundle.js"></script>

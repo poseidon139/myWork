@@ -30,7 +30,10 @@
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- Material Web (M3) Web Components -->
+    <script type="module" src="assets/js/material-web.bundle.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MED0CTB93M"></script>
     <script>
@@ -86,11 +89,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
-                    <!-- theme toggle -->
-                    <li class="nav-item">
-                        <button id="theme-toggle" class="btn btn-sm btn-outline-secondary"
-                            title="Toggle dark/light mode" aria-label="Toggle dark/light mode"><span class="theme-icon"
-                                aria-hidden="true">&#9790;</span></button>
+                    <!-- Material Web theme toggle -->
+                    <li class="nav-item ml-lg-2">
+                        <md-icon-button id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+                            <md-icon id="theme-icon">dark_mode</md-icon>
+                        </md-icon-button>
                     </li>
                 </ul>
             </div>
@@ -106,20 +109,32 @@
                 <h1 class="title">Surya Vardhan</h1>
                 <p>Software Developer</p>
                 <div class="buttons pt-3">
-                    <a href="#contact" class="btn btn-primary rounded">HIRE ME</a>
+                    <md-filled-button href="#contact" class="hire-hero-btn">
+                        <md-icon slot="icon">mail</md-icon>
+                        Hire Me
+                    </md-filled-button>
                 </div>
 
                 <div class="socials mt-4">
-                    <a class="social-item" href="https://www.linkedin.com/in/surya-v-23ab3b232" target="_blank" rel="noopener noreferrer"><i
-                            class="ti-linkedin"></i></a>
-                    <a class="social-item" href="https://www.reddit.com/user/surya0311/"><i class="ti-reddit"></i></a>
-                    <a class="social-item" href="https://github.com/poseidon139"><i class="ti-github"></i></a>
-                    <a class="social-item" href="https://x.com/SuryaVardh21773"><i class="ti-twitter"></i></a>
+                    <a class="social-item m3-social" href="https://www.linkedin.com/in/surya-v-23ab3b232" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="ti-linkedin"></i>
+                        <md-ripple></md-ripple>
+                    </a>
+                    <a class="social-item m3-social" href="https://www.reddit.com/user/surya0311/" target="_blank" rel="noopener noreferrer" aria-label="Reddit">
+                        <i class="ti-reddit"></i>
+                        <md-ripple></md-ripple>
+                    </a>
+                    <a class="social-item m3-social" href="https://github.com/poseidon139" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="ti-github"></i>
+                        <md-ripple></md-ripple>
+                    </a>
+                    <a class="social-item m3-social" href="https://x.com/SuryaVardh21773" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X">
+                        <i class="ti-twitter"></i>
+                        <md-ripple></md-ripple>
+                    </a>
                 </div>
             </div>
         </div>
-
-
     </header>
     <!-- End of Page Header -->
 
@@ -127,17 +142,20 @@
     <section id="about" class="section mt-3">
         <div class="container mt-5">
             <div class="row text-center text-md-left">
-                <div class="col-md-9 mx-auto">
-                    <h2 class="title">About Me</h2>
-                    <p class="subtitle">Software Developer</p>
-                    <p>I'm a software developer from India, with a passion for building scalable,
-                        efficient, and easy-to-use software systems. I have around 3 years of experience in software
-                        development, focusing on web development using Java, Spring, Hibernate, React, Redux, Node.js,
-                        Express.js, MongoDB, MySQL, and AWS.</p>
-                    <p>I have worked on multiple projects including e-commerce websites, social media platforms, online
-                        marketplaces, and real-time analytics platforms. With a strong understanding of computer science
-                        fundamentals, algorithms, data structures, and software design patterns, I enjoy tackling
-                        complex problems in fast-paced environments.</p>
+                <div class="col-md-10 mx-auto">
+                    <div class="about-card p-4 p-md-5">
+                        <md-elevation></md-elevation>
+                        <h2 class="title">About Me</h2>
+                        <p class="subtitle">Software Developer</p>
+                        <p>I'm a software developer from India, with a passion for building scalable,
+                            efficient, and easy-to-use software systems. I have around 3 years of experience in software
+                            development, focusing on web development using Java, Spring, Hibernate, React, Redux, Node.js,
+                            Express.js, MongoDB, MySQL, and AWS.</p>
+                        <p class="mb-0">I have worked on multiple projects including e-commerce websites, social media platforms, online
+                            marketplaces, and real-time analytics platforms. With a strong understanding of computer science
+                            fundamentals, algorithms, data structures, and software design patterns, I enjoy tackling
+                            complex problems in fast-paced environments.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -150,10 +168,42 @@
             <h2 class="section-title mb-4">What I Do</h2>
             <p class="mb-5 pb-4">I do application and web development, and also well-versed in DevOps things.</p>
             <ul class="service-list">
-                <li><i class="icon ti-desktop"></i><div><h3>Web Development</h3><p>Building scalable backends and engaging frontends using modern frameworks.</p></div></li>
-                <li><i class="icon ti-shield"></i><div><h3>Cyber Security</h3><p>Securing infrastructure and performing automated vulnerability assessments.</p></div></li>
-                <li><i class="icon ti-mobile"></i><div><h3>App Development</h3><p>Creating performant mobile applications for Android and cross-platform devices.</p></div></li>
-                <li><i class="icon ti-bar-chart"></i><div><h3>Analytics</h3><p>Implementing real-time data tracking and business intelligence dashboards.</p></div></li>
+                <li>
+                    <md-elevation></md-elevation>
+                    <md-ripple></md-ripple>
+                    <div class="m3-service-icon"><md-icon>desktop_windows</md-icon></div>
+                    <div>
+                        <h3>Web Development</h3>
+                        <p>Building scalable backends and engaging frontends using modern frameworks.</p>
+                    </div>
+                </li>
+                <li>
+                    <md-elevation></md-elevation>
+                    <md-ripple></md-ripple>
+                    <div class="m3-service-icon"><md-icon>security</md-icon></div>
+                    <div>
+                        <h3>Cyber Security</h3>
+                        <p>Securing infrastructure and performing automated vulnerability assessments.</p>
+                    </div>
+                </li>
+                <li>
+                    <md-elevation></md-elevation>
+                    <md-ripple></md-ripple>
+                    <div class="m3-service-icon"><md-icon>smartphone</md-icon></div>
+                    <div>
+                        <h3>App Development</h3>
+                        <p>Creating performant mobile applications for Android and cross-platform devices.</p>
+                    </div>
+                </li>
+                <li>
+                    <md-elevation></md-elevation>
+                    <md-ripple></md-ripple>
+                    <div class="m3-service-icon"><md-icon>insights</md-icon></div>
+                    <div>
+                        <h3>Analytics</h3>
+                        <p>Implementing real-time data tracking and business intelligence dashboards.</p>
+                    </div>
+                </li>
             </ul>
         </div>
     </section>
@@ -168,20 +218,20 @@
                 solutions.</p>
             <div class="row justify-content-center text-center">
                 <div class="col-12 mt-4">
-                    <ul class="skills-list">
-                        <li>Java</li>
-                        <li>C/C++</li>
-                        <li>Python</li>
-                        <li>Javascript</li>
-                        <li>Docker</li>
-                        <li>Kubernetes</li>
-                        <li>AWS</li>
-                        <li>Jenkins</li>
-                        <li>Spring Boot</li>
-                        <li>Android Studio</li>
-                        <li>AI and Machine Learning</li>
-                        <li>Node.js and Express</li>
-                    </ul>
+                    <md-chip-set class="skills-chip-set">
+                        <md-assist-chip label="Java" elevated><md-icon slot="icon">code</md-icon></md-assist-chip>
+                        <md-assist-chip label="C / C++" elevated><md-icon slot="icon">terminal</md-icon></md-assist-chip>
+                        <md-assist-chip label="Python" elevated><md-icon slot="icon">data_object</md-icon></md-assist-chip>
+                        <md-assist-chip label="JavaScript" elevated><md-icon slot="icon">javascript</md-icon></md-assist-chip>
+                        <md-assist-chip label="Docker" elevated><md-icon slot="icon">inventory_2</md-icon></md-assist-chip>
+                        <md-assist-chip label="Kubernetes" elevated><md-icon slot="icon">hub</md-icon></md-assist-chip>
+                        <md-assist-chip label="AWS" elevated><md-icon slot="icon">cloud</md-icon></md-assist-chip>
+                        <md-assist-chip label="Jenkins" elevated><md-icon slot="icon">sync</md-icon></md-assist-chip>
+                        <md-assist-chip label="Spring Boot" elevated><md-icon slot="icon">settings_input_component</md-icon></md-assist-chip>
+                        <md-assist-chip label="Android Studio" elevated><md-icon slot="icon">android</md-icon></md-assist-chip>
+                        <md-assist-chip label="AI & Machine Learning" elevated><md-icon slot="icon">smart_toy</md-icon></md-assist-chip>
+                        <md-assist-chip label="Node.js & Express" elevated><md-icon slot="icon">dns</md-icon></md-assist-chip>
+                    </md-chip-set>
                 </div>
             </div>
         </div>
@@ -197,13 +247,69 @@
                 to mobile apps. <br> Some of my notable projects include a web crawler, a chatbot, a web scraper, a
                 machine learning model, and a mobile app.</p>
             <ul class="project-list">
-                <li><span>Roam The City</span><small>React, Node.js, Socket.IO, PostgreSQL, Kubernetes</small><a href="https://roamthecity.com" target="_blank" rel="noopener noreferrer">Live Site <i class="ti-arrow-right"></i></a></li>
-                <li><span>LAN chat software</span><small>Java, Sockets</small><a href="https://github.com/poseidon139/lanChat">View on GitHub <i class="ti-arrow-right"></i></a></li>
-                <li><span>Weather updates on feature phone</span><small>Node.js, SMS API</small><a href="https://github.com/poseidon139/weatherUpdates">View on GitHub <i class="ti-arrow-right"></i></a></li>
-                <li><span>AI pull request review</span><small>Python, OpenAI, GitHub API</small><a href="https://github.com/poseidon139/aiPRReview">View on GitHub <i class="ti-arrow-right"></i></a></li>
-                <li><span>Anti-face spoofing software</span><small>Python, OpenCV, Machine Learning</small><a href="https://github.com/poseidon139/aniFaceSpoofing">View on GitHub <i class="ti-arrow-right"></i></a></li>
-                <li><span>Full-stack task manager</span><small>React, Node.js, Express</small><a href="https://github.com/poseidon139/todoList">View on GitHub <i class="ti-arrow-right"></i></a></li>
-                <li><span>CI pipeline quality control</span><small>Jenkins, Docker, SonarQube</small><a href="https://github.com/poseidon139/qAInCICD">View on GitHub <i class="ti-arrow-right"></i></a></li>
+                <li>
+                    <md-elevation></md-elevation>
+                    <span>Roam The City</span>
+                    <small>React, Node.js, Socket.IO, PostgreSQL, Kubernetes</small>
+                    <md-text-button href="https://roamthecity.com" target="_blank" rel="noopener noreferrer" trailing-icon>
+                        Live Site
+                        <md-icon slot="icon">arrow_forward</md-icon>
+                    </md-text-button>
+                </li>
+                <li>
+                    <md-elevation></md-elevation>
+                    <span>LAN chat software</span>
+                    <small>Java, Sockets</small>
+                    <md-text-button href="https://github.com/poseidon139/lanChat" target="_blank" rel="noopener noreferrer" trailing-icon>
+                        GitHub
+                        <md-icon slot="icon">open_in_new</md-icon>
+                    </md-text-button>
+                </li>
+                <li>
+                    <md-elevation></md-elevation>
+                    <span>Weather updates on feature phone</span>
+                    <small>Node.js, SMS API</small>
+                    <md-text-button href="https://github.com/poseidon139/weatherUpdates" target="_blank" rel="noopener noreferrer" trailing-icon>
+                        GitHub
+                        <md-icon slot="icon">open_in_new</md-icon>
+                    </md-text-button>
+                </li>
+                <li>
+                    <md-elevation></md-elevation>
+                    <span>AI pull request review</span>
+                    <small>Python, OpenAI, GitHub API</small>
+                    <md-text-button href="https://github.com/poseidon139/aiPRReview" target="_blank" rel="noopener noreferrer" trailing-icon>
+                        GitHub
+                        <md-icon slot="icon">open_in_new</md-icon>
+                    </md-text-button>
+                </li>
+                <li>
+                    <md-elevation></md-elevation>
+                    <span>Anti-face spoofing software</span>
+                    <small>Python, OpenCV, Machine Learning</small>
+                    <md-text-button href="https://github.com/poseidon139/aniFaceSpoofing" target="_blank" rel="noopener noreferrer" trailing-icon>
+                        GitHub
+                        <md-icon slot="icon">open_in_new</md-icon>
+                    </md-text-button>
+                </li>
+                <li>
+                    <md-elevation></md-elevation>
+                    <span>Full-stack task manager</span>
+                    <small>React, Node.js, Express</small>
+                    <md-text-button href="https://github.com/poseidon139/todoList" target="_blank" rel="noopener noreferrer" trailing-icon>
+                        GitHub
+                        <md-icon slot="icon">open_in_new</md-icon>
+                    </md-text-button>
+                </li>
+                <li>
+                    <md-elevation></md-elevation>
+                    <span>CI pipeline quality control</span>
+                    <small>Jenkins, Docker, SonarQube</small>
+                    <md-text-button href="https://github.com/poseidon139/qAInCICD" target="_blank" rel="noopener noreferrer" trailing-icon>
+                        GitHub
+                        <md-icon slot="icon">open_in_new</md-icon>
+                    </md-text-button>
+                </li>
             </ul>
 
         </div>
@@ -218,12 +324,16 @@
             <p class="mb-4 pb-2">Read my latest thoughts, tutorials, and insights on software development and technology.</p>
             <div id="recent-articles" class="row text-left">
                 <!-- Articles will be injected here by Javascript -->
-                <div class="col-12 text-center">
-                    <p class="text-muted"><i class="ti-reload fa-spin mr-2"></i> Loading articles...</p>
+                <div class="col-12 text-center py-5">
+                    <md-circular-progress indeterminate aria-label="Loading articles"></md-circular-progress>
+                    <p class="text-muted mt-3">Loading articles...</p>
                 </div>
             </div>
             <div class="mt-4">
-                <a href="blog.html" class="btn btn-primary rounded">View All Articles</a>
+                <md-outlined-button href="blog.html" trailing-icon>
+                    View All Articles
+                    <md-icon slot="icon">arrow_forward</md-icon>
+                </md-outlined-button>
             </div>
         </div>
     </section>
@@ -237,9 +347,13 @@
     <!-- Hire me section -->
     <section class="bg-gray p-0 section">
         <div class="container">
-            <div class="hire-block">
+            <div class="hire-block m3-surface">
+                <md-elevation></md-elevation>
                 <div><h2>Hire Me For Your Project</h2><p>Looking for a skilled developer to bring your ideas to life? Let's collaborate and make your project a success.</p></div>
-                <a class="btn btn-primary" href="#contact">Hire Me</a>
+                <md-filled-button href="#contact" class="hire-hero-btn">
+                    <md-icon slot="icon">mail</md-icon>
+                    Hire Me
+                </md-filled-button>
             </div>
         </div>
     </section>
@@ -256,33 +370,56 @@
                 <div class="form">
                     <p class="eyebrow">Available 24/7</p>
                     <h3 class="section-title mb-4">Get In Touch</h3>
-                    <form action="https://formspree.io/f/mzzzkrlk" method="POST">
-                        <div class="form-group">
-                            <input type="email" class="form-control" name="_replyto" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Enter email" required>
+                    <form id="contact-form" action="https://formspree.io/f/mzzzkrlk" method="POST">
+                        <div class="form-group mb-3">
+                            <md-outlined-text-field
+                                type="email"
+                                id="contact-email"
+                                name="_replyto"
+                                label="Your Email"
+                                placeholder="name@example.com"
+                                required>
+                                <md-icon slot="leading-icon">email</md-icon>
+                            </md-outlined-text-field>
                         </div>
 
-                        <div class="form-group">
-                            <textarea name="message" id="" cols="30" rows="5" class="form-control"
-                                placeholder="Message"></textarea>
+                        <div class="form-group mb-4">
+                            <md-outlined-text-field
+                                type="textarea"
+                                id="contact-message"
+                                name="message"
+                                label="Your Message"
+                                placeholder="Tell me about your project..."
+                                rows="5"
+                                required>
+                                <md-icon slot="leading-icon">chat</md-icon>
+                            </md-outlined-text-field>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
+                        <md-filled-button type="submit" class="w-100 hire-hero-btn">
+                            <md-icon slot="icon">send</md-icon>
+                            Send Message
+                        </md-filled-button>
                     </form>
                 </div>
                 <div class="contact-infos">
-                    <div class="item">
-                        <i class="ti-location-pin"></i>
-                        <div class="">
+                    <div class="item m3-card">
+                        <md-elevation></md-elevation>
+                        <div class="contact-icon-box">
+                            <md-icon>location_on</md-icon>
+                        </div>
+                        <div>
                             <h5>Location</h5>
-                            <p> Bengaluru Karnataka</p>
+                            <p class="mb-0">Bengaluru, Karnataka</p>
                         </div>
                     </div>
-                    <div class="item">
-                        <a href="mailto:suryavardhan261@gmail.com" aria-label="Email Surya"><i class="ti-email"
-                            aria-hidden="true"></i></a>
-                        <div class="mb-0">
+                    <div class="item m3-card">
+                        <md-elevation></md-elevation>
+                        <div class="contact-icon-box">
+                            <md-icon>email</md-icon>
+                        </div>
+                        <div>
                             <h5>Email Address</h5>
-                            <p>suryavardhan261@gmail.com</p>
+                            <p class="mb-0"><a href="mailto:suryavardhan261@gmail.com">suryavardhan261@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -303,12 +440,10 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="socials">
-                        <a class="social-item" href="https://www.linkedin.com/in/surya-v-23ab3b232" target="_blank" rel="noopener noreferrer"><i
-                                class="ti-linkedin"></i></a>
-                        <a class="social-item" href="https://www.reddit.com/user/surya0311/"><i
-                                class="ti-reddit"></i></a>
-                        <a class="social-item" href="https://github.com/poseidon139"><i class="ti-github"></i></a>
-                        <a class="social-item" href="https://x.com/SuryaVardh21773"><i class="ti-twitter"></i></a>
+                        <a class="social-item m3-social" href="https://www.linkedin.com/in/surya-v-23ab3b232" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ti-linkedin"></i><md-ripple></md-ripple></a>
+                        <a class="social-item m3-social" href="https://www.reddit.com/user/surya0311/" target="_blank" rel="noopener noreferrer" aria-label="Reddit"><i class="ti-reddit"></i><md-ripple></md-ripple></a>
+                        <a class="social-item m3-social" href="https://github.com/poseidon139" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="ti-github"></i><md-ripple></md-ripple></a>
+                        <a class="social-item m3-social" href="https://x.com/SuryaVardh21773" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X"><i class="ti-twitter"></i><md-ripple></md-ripple></a>
                     </div>
                 </div>
             </div>
@@ -316,12 +451,16 @@
     </footer>
     <!-- End of page footer -->
 
+    <!-- Back to top FAB -->
+    <md-fab id="back-to-top" size="medium" aria-label="Scroll to top" class="back-to-top-fab" title="Scroll to top">
+        <md-icon slot="icon">arrow_upward</md-icon>
+    </md-fab>
+
     <!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
     <!-- bootstrap 3 affix -->
     <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
-
 
     <script src="assets/js/index.js"></script>
 
@@ -348,11 +487,17 @@
                     recent.forEach(article => {
                         const card = `
                             <div class="col-md-4 mb-4">
-                                <article class="blog-item">
+                                <article class="blog-item m3-card">
+                                    <md-elevation></md-elevation>
                                     <p class="eyebrow">${article.date}</p>
                                     <h3><a href="${article.filename}">${article.title}</a></h3>
                                     <p>${article.description}</p>
-                                    <a href="${article.filename}">Read More <i class="ti-arrow-right"></i></a>
+                                    <div class="mt-3">
+                                        <md-text-button href="${article.filename}" trailing-icon>
+                                            Read More
+                                            <md-icon slot="icon">arrow_forward</md-icon>
+                                        </md-text-button>
+                                    </div>
                                 </article>
                             </div>
                         `;

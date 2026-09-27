@@ -23,7 +23,10 @@
     <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="../assets/css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="stylesheet" href="../assets/css/custom.css">
+    <!-- Material Web (M3) Web Components -->
+    <script type="module" src="../assets/js/material-web.bundle.js"></script>
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -80,11 +83,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html#contact">Contact</a>
                     </li>
-                    <!-- theme toggle -->
-                    <li class="nav-item">
-                        <button id="theme-toggle" class="btn btn-sm btn-outline-secondary"
-                            title="Toggle dark/light mode" aria-label="Toggle dark/light mode"><span class="theme-icon"
-                                aria-hidden="true">&#9790;</span></button>
+                    <!-- Material Web theme toggle -->
+                    <li class="nav-item ml-lg-2">
+                        <md-icon-button id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+                            <md-icon id="theme-icon">dark_mode</md-icon>
+                        </md-icon-button>
                     </li>
                 </ul>
             </div>
@@ -124,7 +127,8 @@
                         <h2 class="mt-5 mb-3" style="color: var(--text-primary);">2. Automated Code Reviews</h2>
                         <p>One of the most powerful applications of AI is automating the initial pass of code reviews. By integrating AI into your CI/CD pipeline, you can catch stylistic issues, potential bugs, and security vulnerabilities before a human reviewer even looks at the Pull Request. This saves valuable engineering time and allows human reviewers to focus on architecture and business logic.</p>
 
-                        <div class="p-4 rounded mb-4" style="background: var(--bg-card); border: 1px solid var(--border-glass);">
+                        <div class="p-4 rounded mb-4 m3-surface">
+                            <md-elevation></md-elevation>
                             <h3 class="mb-3" style="color: var(--text-primary);">Key Areas for AI Assistance:</h3>
                             <ul class="mb-0">
                                 <li class="mb-2"><strong>Code Generation:</strong> Boilerplate, regex, and standard functions.</li>
@@ -140,14 +144,23 @@
                         <p class="mt-5">By embracing AI as a productivity enhancer rather than a replacement, you can elevate your software engineering to the next level. If you're interested in learning more about how I implement these tools, feel free to <a href="../index.html#contact" class="text-primary font-weight-bold">reach out</a>.</p>
                     </div>
 
-                    <div class="mt-5 pt-4 border-top" style="border-color: var(--border-glass) !important;">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <a href="../index.html#blog" class="btn btn-outline-primary btn-sm"><i class="ti-arrow-left mr-2"></i> Back to Blog</a>
-                            <div class="socials">
-                                <span class="mr-3 small text-muted">Share:</span>
-                                <a class="social-item m-0" href="#" onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title), '_blank'); return false;" style="width: 35px; height: 35px;" title="Share on Twitter/X"><i class="ti-twitter"></i></a>
-                                <a class="social-item m-0" href="#" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href), '_blank'); return false;" style="width: 35px; height: 35px;" title="Share on LinkedIn"><i class="ti-linkedin"></i></a>
-                            </div>
+                    <md-divider class="my-4"></md-divider>
+
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                        <md-outlined-button href="../blog.html">
+                            <md-icon slot="icon">arrow_back</md-icon>
+                            All Articles
+                        </md-outlined-button>
+                        <div class="d-flex align-items-center flex-wrap gap-2">
+                            <span class="mr-2 small text-muted">Share:</span>
+                            <md-filled-tonal-button onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title), '_blank');">
+                                <md-icon slot="icon">share</md-icon>
+                                Share on X
+                            </md-filled-tonal-button>
+                            <md-filled-tonal-button onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href), '_blank');">
+                                <md-icon slot="icon">share</md-icon>
+                                Share on LinkedIn
+                            </md-filled-tonal-button>
                         </div>
                     </div>
                 </div>
@@ -168,18 +181,21 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="socials">
-                        <a class="social-item" href="https://www.linkedin.com/in/surya-v-23ab3b232" target="_blank" rel="noopener noreferrer"><i
-                                class="ti-linkedin"></i></a>
-                        <a class="social-item" href="https://www.reddit.com/user/surya0311/"><i
-                                class="ti-reddit"></i></a>
-                        <a class="social-item" href="https://github.com/poseidon139"><i class="ti-github"></i></a>
-                        <a class="social-item" href="https://x.com/SuryaVardh21773"><i class="ti-twitter"></i></a>
+                        <a class="social-item m3-social" href="https://www.linkedin.com/in/surya-v-23ab3b232" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ti-linkedin"></i><md-ripple></md-ripple></a>
+                        <a class="social-item m3-social" href="https://www.reddit.com/user/surya0311/" target="_blank" rel="noopener noreferrer" aria-label="Reddit"><i class="ti-reddit"></i><md-ripple></md-ripple></a>
+                        <a class="social-item m3-social" href="https://github.com/poseidon139" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="ti-github"></i><md-ripple></md-ripple></a>
+                        <a class="social-item m3-social" href="https://x.com/SuryaVardh21773" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X"><i class="ti-twitter"></i><md-ripple></md-ripple></a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
     <!-- End of page footer -->
+
+    <!-- Back to top FAB -->
+    <md-fab id="back-to-top" size="medium" aria-label="Scroll to top" class="back-to-top-fab" title="Scroll to top">
+        <md-icon slot="icon">arrow_upward</md-icon>
+    </md-fab>
 
     <!-- core  -->
     <script src="../assets/vendors/jquery/jquery-3.4.1.js"></script>

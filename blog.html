@@ -22,7 +22,10 @@
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- Material Web (M3) Web Components -->
+    <script type="module" src="assets/js/material-web.bundle.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MED0CTB93M"></script>
     <script>
@@ -74,11 +77,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.html#contact">Contact</a>
                     </li>
-                    <!-- theme toggle -->
-                    <li class="nav-item">
-                        <button id="theme-toggle" class="btn btn-sm btn-outline-secondary"
-                            title="Toggle dark/light mode" aria-label="Toggle dark/light mode"><span class="theme-icon"
-                                aria-hidden="true">&#9790;</span></button>
+                    <!-- Material Web theme toggle -->
+                    <li class="nav-item ml-lg-2">
+                        <md-icon-button id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+                            <md-icon id="theme-icon">dark_mode</md-icon>
+                        </md-icon-button>
                     </li>
                 </ul>
             </div>
@@ -91,8 +94,17 @@
         <div class="container mt-2">
             <div class="row justify-content-center">
                 <div class="col-12 text-left blog-page-header">
-                    <h1 class="h3 title mb-4">All Articles</h1>
-                    <p class="text-muted">Explore all my writing on software development, tech, and more.</p>
+                    <h1 class="h3 title mb-3">All Articles</h1>
+                    <p class="text-muted mb-4">Explore all my writing on software development, tech, and engineering.</p>
+                    
+                    <!-- Search and filters -->
+                    <div class="row mb-2">
+                        <div class="col-md-6 mb-3">
+                            <md-outlined-text-field id="blog-search" name="search" label="Search articles..." type="search">
+                                <md-icon slot="leading-icon">search</md-icon>
+                            </md-outlined-text-field>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -100,12 +112,13 @@
     <!-- End of Blog Header -->
 
     <!-- Blog section -->
-    <section class="section pt-5">
+    <section class="section pt-4">
         <div class="container">
             <div id="all-articles" class="row text-left">
                 <!-- Articles will be injected here by Javascript -->
-                <div class="col-12 text-center">
-                    <p class="text-muted"><i class="ti-reload fa-spin mr-2"></i> Loading articles...</p>
+                <div class="col-12 text-center py-5">
+                    <md-circular-progress indeterminate aria-label="Loading articles"></md-circular-progress>
+                    <p class="text-muted mt-3">Loading articles...</p>
                 </div>
             </div>
         </div>
@@ -124,10 +137,10 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="socials">
-                        <a class="social-item" href="https://www.linkedin.com/in/surya-v-23ab3b232" target="_blank" rel="noopener noreferrer"><i class="ti-linkedin"></i></a>
-                        <a class="social-item" href="https://www.reddit.com/user/surya0311/"><i class="ti-reddit"></i></a>
-                        <a class="social-item" href="https://github.com/poseidon139"><i class="ti-github"></i></a>
-                        <a class="social-item" href="https://x.com/SuryaVardh21773"><i class="ti-twitter"></i></a>
+                        <a class="social-item m3-social" href="https://www.linkedin.com/in/surya-v-23ab3b232" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ti-linkedin"></i><md-ripple></md-ripple></a>
+                        <a class="social-item m3-social" href="https://www.reddit.com/user/surya0311/" target="_blank" rel="noopener noreferrer" aria-label="Reddit"><i class="ti-reddit"></i><md-ripple></md-ripple></a>
+                        <a class="social-item m3-social" href="https://github.com/poseidon139" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="ti-github"></i><md-ripple></md-ripple></a>
+                        <a class="social-item m3-social" href="https://x.com/SuryaVardh21773" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X"><i class="ti-twitter"></i><md-ripple></md-ripple></a>
                     </div>
                 </div>
             </div>
@@ -135,40 +148,58 @@
     </footer>
     <!-- End of page footer -->
 
+    <!-- Back to top FAB -->
+    <md-fab id="back-to-top" size="medium" aria-label="Scroll to top" class="back-to-top-fab" title="Scroll to top">
+        <md-icon slot="icon">arrow_upward</md-icon>
+    </md-fab>
+
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
     <script src="assets/js/index.js"></script>
 
-    <!-- Blog Dynamic Loader -->
+    <!-- Blog Dynamic Loader with Search -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            let allArticlesData = [];
+
+            function renderArticles(articles) {
+                const container = document.getElementById('all-articles');
+                container.innerHTML = '';
+                
+                if (articles.length === 0) {
+                    container.innerHTML = '<div class="col-12 text-center py-5"><p class="text-muted">No articles found matching your search.</p></div>';
+                    return;
+                }
+                
+                articles.forEach(article => {
+                    const card = `
+                        <div class="col-md-6 mb-4">
+                            <article class="blog-item m3-card">
+                                <md-elevation></md-elevation>
+                                <p class="eyebrow">${article.date}</p>
+                                <h2><a href="${article.filename}">${article.title}</a></h2>
+                                <p>${article.description}</p>
+                                <div class="mt-3">
+                                    <md-text-button href="${article.filename}" trailing-icon>
+                                        Read More
+                                        <md-icon slot="icon">arrow_forward</md-icon>
+                                    </md-text-button>
+                                </div>
+                            </article>
+                        </div>
+                    `;
+                    container.innerHTML += card;
+                });
+            }
+
             fetch('blog-data.json')
                 .then(response => {
                     if (!response.ok) throw new Error("Could not find blog-data.json");
                     return response.json();
                 })
                 .then(articles => {
-                    const container = document.getElementById('all-articles');
-                    container.innerHTML = ''; // clear loading state
-                    
-                    if (articles.length === 0) {
-                        container.innerHTML = '<div class="col-12 text-center"><p>No articles found. Add some HTML files to the articles folder!</p></div>';
-                        return;
-                    }
-                    
-                    articles.forEach(article => {
-                        const card = `
-                            <div class="col-md-4 mb-4">
-                                <article class="blog-item">
-                                    <p class="eyebrow">${article.date}</p>
-                                    <h2><a href="${article.filename}">${article.title}</a></h2>
-                                    <p>${article.description}</p>
-                                    <a href="${article.filename}">Read More <i class="ti-arrow-right"></i></a>
-                                </article>
-                            </div>
-                        `;
-                        container.innerHTML += card;
-                    });
+                    allArticlesData = articles;
+                    renderArticles(articles);
                 })
                 .catch(error => {
                     console.error('Error fetching blog data:', error);
@@ -177,6 +208,23 @@
                         container.innerHTML = '<div class="col-12 text-center"><p class="text-danger">Could not load articles. Please run "node generate_blog.js".</p></div>';
                     }
                 });
+
+            // Instant Search
+            const searchField = document.getElementById('blog-search');
+            if (searchField) {
+                searchField.addEventListener('input', function(e) {
+                    const query = (e.target.value || '').toLowerCase().trim();
+                    if (!query) {
+                        renderArticles(allArticlesData);
+                        return;
+                    }
+                    const filtered = allArticlesData.filter(a => 
+                        a.title.toLowerCase().includes(query) || 
+                        a.description.toLowerCase().includes(query)
+                    );
+                    renderArticles(filtered);
+                });
+            }
         });
     </script>
 </body>
