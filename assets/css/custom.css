@@ -1373,35 +1373,40 @@ md-divider {
 /* Speech Bubble */
 .fish-speech-bubble {
   position: absolute;
-  top: -34px;
-  left: -8px;
+  bottom: calc(100% + 8px);
+  right: 12px;
+  left: auto;
+  top: auto;
+  width: max-content;
+  max-width: min(290px, calc(100vw - 52px));
+  white-space: nowrap;
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid var(--border-glass);
   color: #ea580c;
   font-family: var(--font-main);
   font-size: 0.74rem;
   font-weight: 600;
-  padding: 3px 10px;
-  border-radius: 12px;
-  white-space: nowrap;
+  padding: 4px 12px;
+  border-radius: 14px;
   pointer-events: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
   opacity: 0;
   transform: translateY(6px) scale(0.9);
   transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
   z-index: 1050;
+  box-sizing: border-box;
 }
 
 .fish-speech-bubble::after {
   content: '';
   position: absolute;
-  bottom: -5px;
-  left: 20px;
+  bottom: -6px;
+  right: 28px;
   width: 0;
   height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid rgba(255, 255, 255, 0.96);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid rgba(255, 255, 255, 0.96);
 }
 
 .fish-speech-bubble.visible {
@@ -1439,5 +1444,252 @@ body.dark-theme .fish-speech-bubble::after {
     width: 56px;
     height: 44px;
   }
+  .fish-speech-bubble {
+    right: 4px;
+    max-width: min(220px, calc(100vw - 36px));
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+  .fish-speech-bubble::after {
+    right: 22px;
+  }
+}
+
+/* ==========================================================================
+   Fish Autonomous Special Actions (Eat, Ocean Dive, Alien, Color Shift, Sleep)
+   ========================================================================== */
+
+/* 1. Eating / Food */
+.fish-food-item {
+  position: absolute;
+  top: 14px;
+  left: -32px;
+  font-size: 1.25rem;
+  line-height: 1;
+  pointer-events: none;
+  z-index: 1048;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+  animation: foodBob 1.6s ease-in-out infinite alternate;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s ease;
+}
+
+@keyframes foodBob {
+  0% { transform: translateY(0px) rotate(-6deg); }
+  100% { transform: translateY(6px) rotate(8deg); }
+}
+
+#tiny-fish-companion.is-eating .fish-inner {
+  transform: translateX(-24px) rotate(-8deg);
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* 2. Alien Mode */
+.fish-alien-antenna {
+  opacity: 0;
+  transform: translateY(8px) scale(0.6);
+  transform-origin: 148px 64px;
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+
+#tiny-fish-companion.is-alien .fish-alien-antenna {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+#tiny-fish-companion.is-alien .alien-orb-glow {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: alienOrbPulse 0.9s ease-in-out infinite alternate;
+}
+
+@keyframes alienOrbPulse {
+  0% { transform: scale(1); opacity: 0.4; }
+  100% { transform: scale(1.4); opacity: 0.95; }
+}
+
+.fish-ufo-container {
+  position: absolute;
+  top: -72px;
+  left: -14px;
+  width: 96px;
+  height: 95px;
+  pointer-events: none;
+  z-index: 1042;
+  opacity: 0;
+  transform: translateY(-16px) scale(0.85);
+  transition: opacity 0.4s ease, transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.fish-ufo-container.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.fish-ufo-saucer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.45rem;
+  line-height: 1;
+  animation: ufoWobble 1.8s ease-in-out infinite;
+}
+
+@keyframes ufoWobble {
+  0%, 100% { transform: translateX(-50%) rotate(-4deg); }
+  50% { transform: translateX(-50%) rotate(5deg); }
+}
+
+.fish-beam-cone {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 78px;
+  height: 70px;
+  background: linear-gradient(to bottom, rgba(52, 211, 153, 0.6) 0%, rgba(16, 185, 129, 0.28) 55%, rgba(5, 150, 105, 0) 100%);
+  clip-path: polygon(36% 0%, 64% 0%, 100% 100%, 0% 100%);
+  animation: beamFlicker 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes beamFlicker {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+#tiny-fish-companion.is-alien .fish-inner {
+  animation: alienHover 2.2s ease-in-out infinite;
+}
+
+@keyframes alienHover {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  35% { transform: translateY(-7px) rotate(-6deg); }
+  70% { transform: translateY(5px) rotate(6deg); }
+}
+
+/* 3. Ocean Dive Mode */
+.fish-ocean-ring {
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  border: 2px solid rgba(56, 189, 248, 0.75);
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.28) 0%, rgba(2, 132, 199, 0.1) 60%, transparent 100%);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.55), inset 0 0 12px rgba(56, 189, 248, 0.35);
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 1041;
+}
+
+.fish-ocean-ring.visible {
+  opacity: 1;
+  transform: scale(1);
+  animation: oceanPulse 2s ease-in-out infinite;
+}
+
+@keyframes oceanPulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 16px rgba(56, 189, 248, 0.55); }
+  50% { transform: scale(1.08); box-shadow: 0 0 24px rgba(56, 189, 248, 0.8); }
+}
+
+.fish-jellyfish {
+  position: absolute;
+  left: -36px;
+  top: 10px;
+  font-size: 1.3rem;
+  line-height: 1;
+  pointer-events: none;
+  z-index: 1046;
+  opacity: 0;
+  animation: jellyfishSwim 3.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes jellyfishSwim {
+  0% { opacity: 0; transform: translate(0, 20px) scale(0.6); }
+  20% { opacity: 0.95; transform: translate(-6px, 0px) scale(1); }
+  60% { opacity: 0.9; transform: translate(-14px, -30px) scale(1.05); }
+  100% { opacity: 0; transform: translate(-20px, -60px) scale(1.2); }
+}
+
+#tiny-fish-companion.is-diving .fish-inner {
+  animation: oceanDiveLoop 3.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes oceanDiveLoop {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-16px, 14px) rotate(-26deg); }
+  45% { transform: translate(-28px, -12px) rotate(-65deg); }
+  70% { transform: translate(-10px, -24px) rotate(-15deg); }
+  85% { transform: translate(4px, -8px) rotate(12deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* 4. Color Spin / Sparkles */
+#tiny-fish-companion.is-color-spin .fish-inner {
+  animation: colorSpinTwirl 1.1s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes colorSpinTwirl {
+  0% { transform: scale(1) rotate(0deg); }
+  35% { transform: scale(1.28) rotate(-18deg); }
+  65% { transform: scale(1.24) rotate(18deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+.fish-sparkle-item {
+  position: absolute;
+  pointer-events: none;
+  font-size: 0.95rem;
+  line-height: 1;
+  z-index: 1049;
+  animation: sparklePop 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes sparklePop {
+  0% { opacity: 0; transform: translate(0, 0) scale(0.3); }
+  25% { opacity: 1; transform: translate(calc(var(--pop-x, 0px) * 0.5), calc(var(--pop-y, 0px) * 0.5)) scale(1.2); }
+  100% { opacity: 0; transform: translate(var(--pop-x, 0px), var(--pop-y, 0px)) scale(0.4); }
+}
+
+/* 5. Sleeping / Nap Mode */
+#tiny-fish-companion.is-sleeping .eyelid-closed {
+  opacity: 1 !important;
+}
+
+#tiny-fish-companion.is-sleeping .eye-white,
+#tiny-fish-companion.is-sleeping .pupil-target {
+  opacity: 0 !important;
+}
+
+#tiny-fish-companion.is-sleeping .fish-inner {
+  animation: sleepFloat 4.8s ease-in-out infinite !important;
+}
+
+@keyframes sleepFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(4px) rotate(-2deg); }
+}
+
+.fish-zzz-bubble {
+  position: absolute;
+  left: 2px;
+  top: 10px;
+  font-family: var(--font-main);
+  font-weight: 800;
+  font-size: 0.72rem;
+  color: #38bdf8;
+  pointer-events: none;
+  z-index: 1049;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  animation: zzzRise 2.8s ease-out forwards;
+}
+
+@keyframes zzzRise {
+  0% { opacity: 0; transform: translate(0, 0) scale(0.5); }
+  20% { opacity: 0.95; transform: translate(-6px, -12px) scale(0.85); }
+  75% { opacity: 0.75; transform: translate(-14px, -38px) scale(1.15); }
+  100% { opacity: 0; transform: translate(-20px, -55px) scale(1.3); }
 }
 
