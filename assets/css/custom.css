@@ -1174,3 +1174,270 @@ md-divider {
   --md-divider-color: var(--border-glass);
   margin: 1.5rem 0;
 }
+
+/* ==========================================================================
+   Tiny Fish Companion Styles
+   ========================================================================== */
+
+#tiny-fish-companion {
+  position: fixed;
+  top: 76px;
+  right: 24px;
+  width: 68px;
+  height: 54px;
+  z-index: 1045;
+  pointer-events: auto;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  filter: drop-shadow(0 4px 10px rgba(234, 91, 25, 0.28));
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#tiny-fish-companion:hover {
+  transform: scale(1.1) translateY(-2px);
+  filter: drop-shadow(0 6px 14px rgba(234, 91, 25, 0.38));
+}
+
+#tiny-fish-companion .fish-inner {
+  width: 100%;
+  height: 100%;
+  animation: fishFloat 3.8s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+.fish-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+  transform: scaleX(-1);
+}
+
+/* Sub-part Animations */
+.fish-tail {
+  transform-origin: 52px 95px;
+  animation: tailWag 1.8s ease-in-out infinite;
+}
+
+.fish-pectoral {
+  transform-origin: 88px 104px;
+  animation: finFlutter 2.2s ease-in-out infinite;
+}
+
+.fish-dorsal {
+  transform-origin: 100px 70px;
+  animation: dorsalSway 3s ease-in-out infinite;
+}
+
+.fish-fin-back {
+  transform-origin: 152px 98px;
+  animation: finFlutter 2.4s ease-in-out infinite alternate-reverse;
+}
+
+/* Eye Pupil Transition */
+.pupil-target {
+  transition: transform 0.06s ease-out;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* Blinking & Happy Expression */
+.eyelid-closed {
+  opacity: 0;
+  transition: opacity 0.08s ease;
+}
+
+.eye-white,
+.pupil-target {
+  opacity: 1;
+  transition: opacity 0.08s ease;
+}
+
+#tiny-fish-companion.blinking .eyelid-closed,
+#tiny-fish-companion.happy-action .eyelid-closed {
+  opacity: 1 !important;
+}
+
+#tiny-fish-companion.blinking .eye-white,
+#tiny-fish-companion.blinking .pupil-target,
+#tiny-fish-companion.happy-action .eye-white,
+#tiny-fish-companion.happy-action .pupil-target {
+  opacity: 0 !important;
+}
+
+#tiny-fish-companion.happy-action .fish-inner {
+  animation: happyWiggle 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Keyframes */
+@keyframes fishFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  30% {
+    transform: translateY(-5px) rotate(2deg);
+  }
+  70% {
+    transform: translateY(3px) rotate(-1.5deg);
+  }
+}
+
+@keyframes tailWag {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(11deg);
+  }
+}
+
+@keyframes finFlutter {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(-9deg) scale(0.96);
+  }
+}
+
+@keyframes dorsalSway {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-3.5deg);
+  }
+}
+
+@keyframes happyWiggle {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  20% {
+    transform: scale(1.18) rotate(-14deg);
+  }
+  40% {
+    transform: scale(1.22) rotate(16deg);
+  }
+  60% {
+    transform: scale(1.18) rotate(-10deg);
+  }
+  80% {
+    transform: scale(1.1) rotate(6deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Bubble stream */
+.fish-bubble-stream {
+  position: absolute;
+  top: 18px;
+  left: 6px;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.fish-bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.95), rgba(186, 230, 253, 0.55) 55%, rgba(56, 189, 248, 0.65) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 5px rgba(56, 189, 248, 0.4), inset -1px -1px 2px rgba(14, 165, 233, 0.35);
+  animation: bubbleRise 2.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  pointer-events: none;
+}
+
+@keyframes bubbleRise {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.3);
+  }
+  15% {
+    opacity: 0.95;
+    transform: translate(calc(var(--drift-x, 0px) * 0.2), -12px) scale(1);
+  }
+  80% {
+    opacity: 0.85;
+    transform: translate(calc(var(--drift-x, 0px) * 0.75), -52px) scale(1.12);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--drift-x, 0px), -78px) scale(1.3);
+  }
+}
+
+/* Speech Bubble */
+.fish-speech-bubble {
+  position: absolute;
+  top: -34px;
+  left: -8px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--border-glass);
+  color: #ea580c;
+  font-family: var(--font-main);
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(6px) scale(0.9);
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 1050;
+}
+
+.fish-speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba(255, 255, 255, 0.96);
+}
+
+.fish-speech-bubble.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+body.dark-theme .fish-speech-bubble {
+  background: rgba(38, 42, 38, 0.96);
+  color: #fba858;
+  border-color: var(--border-glass);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-theme .fish-speech-bubble::after {
+  border-top-color: rgba(38, 42, 38, 0.96);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  #tiny-fish-companion .fish-inner,
+  .fish-tail,
+  .fish-pectoral,
+  .fish-dorsal,
+  .fish-fin-back {
+    animation: none !important;
+  }
+}
+
+/* Responsive adjustment */
+@media (max-width: 767.98px) {
+  #tiny-fish-companion {
+    top: 66px;
+    right: 14px;
+    width: 56px;
+    height: 44px;
+  }
+}
+
