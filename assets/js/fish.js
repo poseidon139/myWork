@@ -19,8 +19,8 @@
     const container = document.createElement('div');
     container.id = 'tiny-fish-companion';
     container.setAttribute('role', 'img');
-    container.setAttribute('aria-label', 'Cute little animated fish companion');
-    container.setAttribute('title', 'Click me to play or watch me explore! 🫧');
+    container.setAttribute('aria-label', 'Nemo: System event-loop and telemetry companion');
+    container.setAttribute('title', 'Nemo 🫧 Event-loop companion: watching latency, clicks & packets');
 
     container.innerHTML = `
       <!-- UFO Beam overlay for alien mode -->
@@ -587,12 +587,13 @@
       if (blushRight) blushRight.style.opacity = '0.85';
 
       const cutePhrases = [
-        'Blub! 🫧',
-        'Splash! ✨',
-        'Hello friend! 🐟',
-        'Keep swimming! 🌊',
-        'Nice code! 💻',
-        'Glub glub! ❤️'
+        'Blub! All services healthy 🫧',
+        'Ping: 14ms · zero packet loss ⚡',
+        'Event-loop companion online! 🐟',
+        'Keep swimming, keep shipping! 🌊',
+        'Clean commits, clean waters 💻',
+        'Garbage collection complete! ✨',
+        'Observing sys.telemetry... 📡'
       ];
       const phrase = cutePhrases[Math.floor(Math.random() * cutePhrases.length)];
       showSpeech(phrase, 1800);
