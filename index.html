@@ -296,9 +296,88 @@
                 </div>
             </article>
 
+            <!-- Featured Project 2: PodLens (Flagship Cloud AI Project) -->
+            <article class="lead-project-card m3-card podlens-card">
+                <md-elevation></md-elevation>
+                <div class="row align-items-center">
+                    <!-- Visual & Live Stream Telemetry Frame -->
+                    <div class="col-lg-6 mb-4 mb-lg-0 order-1 order-lg-2">
+                        <div class="lead-project-visual podlens-visual">
+                            <div class="map-visual-header">
+                                <span class="live-grounding-pill font-mono"><span class="live-pulse"></span>LIVE STREAM GROUNDING</span>
+                                <span class="font-mono small text-muted">&bull; Cloud Run :: us-central1</span>
+                            </div>
+                            <div class="podlens-visual-content">
+                                <div class="podlens-frame">
+                                    <img src="assets/imgs/podlens.png" alt="PodLens Real-Time Search-Grounded Fact-Checker interface" class="podlens-screen-img">
+                                    <div class="podlens-telemetry-overlay font-mono">
+                                        <div class="telemetry-chip chip-claim">
+                                            <span class="chip-dot yellow"></span>
+                                            <span>Claim: 16h Human Autophagy</span>
+                                        </div>
+                                        <div class="telemetry-chip chip-ground">
+                                            <span class="chip-dot green"></span>
+                                            <span>Grounded: Rodent-Only Consensus</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="map-visual-footer">
+                                <span>Gemini 1.5 Flash + Google Search Tool</span>
+                                <span class="text-success font-mono">&bull; Credibility Score: 91%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Narrative & Technical Breakdown -->
+                    <div class="col-lg-6 pr-lg-4 order-2 order-lg-1">
+                        <span class="lead-feature-tag" style="color: #818cf8;">FLAGSHIP AI PROJECT &middot; REAL-TIME GROUNDING</span>
+                        <h3 class="h2 font-weight-bold mb-3" style="color: var(--text-primary);">PodLens (CiteCast)</h3>
+                        
+                        <div class="project-case-grid">
+                            <div class="case-point">
+                                <h5>The Problem</h5>
+                                <p>Long-form video podcasts are the world's most consumed educational medium, yet they frequently spread unverified assertions, misrepresented statistics, and animal studies falsely generalized to humans without live citations.</p>
+                            </div>
+                            <div class="case-point">
+                                <h5>Architecture &amp; Technical Decision</h5>
+                                <p>Architected an asynchronous streaming verification engine on Google Cloud Run using Pub/Sub for 30s audio chunking and Gemini 1.5 Flash with Google Search Grounding to distinguish banter from empirical claims. Synchronized timecoded claim cards over WebSockets directly to the video player timeline.</p>
+                            </div>
+                            <div class="case-point">
+                                <h5>Verified Result &amp; Lesson</h5>
+                                <p>Delivered sub-2s claim extraction and verification with primary academic literature citations (DOIs, PubMed) and automated 91%+ credibility dossiers across 60+ minute podcast episodes.</p>
+                            </div>
+                        </div>
+
+                        <div class="tech-pill-set">
+                            <span class="tech-pill">GCP Cloud Run</span>
+                            <span class="tech-pill">Vertex AI</span>
+                            <span class="tech-pill">Gemini 1.5 Flash</span>
+                            <span class="tech-pill">Google Search Grounding</span>
+                            <span class="tech-pill">FastAPI</span>
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">React</span>
+                            <span class="tech-pill">Cloud Firestore</span>
+                            <span class="tech-pill">WebSockets</span>
+                        </div>
+
+                        <div class="d-flex align-items-center flex-wrap gap-3 mt-3">
+                            <md-filled-button href="https://podlens-786916498793.us-central1.run.app/" target="_blank" rel="noopener noreferrer" trailing-icon>
+                                Experience Live
+                                <md-icon slot="icon">open_in_new</md-icon>
+                            </md-filled-button>
+                            <md-outlined-button href="https://github.com/poseidon139/podlens" target="_blank" rel="noopener noreferrer" trailing-icon>
+                                View Source Code
+                                <md-icon slot="icon">open_in_new</md-icon>
+                            </md-outlined-button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
             <!-- Featured Duo Grid: AI PR Review & Anti-Face Spoofing -->
             <div class="row">
-                <!-- Featured Project 2: AI Pull Request Review -->
+                <!-- Featured Project 3: AI Pull Request Review -->
                 <div class="col-md-6 mb-4">
                     <article class="featured-duo-card m3-card">
                         <md-elevation></md-elevation>
@@ -614,6 +693,7 @@
                             <span class="tech-pill">Node.js</span>
                             <span class="tech-pill">Express.js</span>
                             <span class="tech-pill">Python</span>
+                            <span class="tech-pill">FastAPI</span>
                             <span class="tech-pill">C / C++</span>
                             <span class="tech-pill">PostgreSQL</span>
                             <span class="tech-pill">MySQL</span>
@@ -645,6 +725,8 @@
                             <h4>DevOps, Cloud &amp; Infrastructure</h4>
                         </div>
                         <div class="tech-pill-set mb-0">
+                            <span class="tech-pill">Google Cloud Run</span>
+                            <span class="tech-pill">Vertex AI</span>
                             <span class="tech-pill">Docker</span>
                             <span class="tech-pill">Kubernetes</span>
                             <span class="tech-pill">AWS Services</span>
@@ -662,6 +744,8 @@
                             <h4>Real-Time &amp; Specialized Capabilities</h4>
                         </div>
                         <div class="tech-pill-set mb-0">
+                            <span class="tech-pill">Gemini 1.5 Flash</span>
+                            <span class="tech-pill">Google Search Grounding</span>
                             <span class="tech-pill">Socket.IO &amp; WebSockets</span>
                             <span class="tech-pill">OpenCV Computer Vision</span>
                             <span class="tech-pill">Machine Learning</span>
