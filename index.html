@@ -307,18 +307,64 @@
                                 <span class="live-grounding-pill font-mono"><span class="live-pulse"></span>LIVE STREAM GROUNDING</span>
                                 <span class="font-mono small text-muted">&bull; Cloud Run :: us-central1</span>
                             </div>
-                            <div class="podlens-visual-content">
-                                <div class="podlens-frame">
-                                    <img src="assets/imgs/podlens.png" alt="PodLens Real-Time Search-Grounded Fact-Checker interface" class="podlens-screen-img">
-                                    <div class="podlens-telemetry-overlay font-mono">
-                                        <div class="telemetry-chip chip-claim">
-                                            <span class="chip-dot yellow"></span>
-                                            <span>Claim: 16h Human Autophagy</span>
-                                        </div>
-                                        <div class="telemetry-chip chip-ground">
-                                            <span class="chip-dot green"></span>
-                                            <span>Grounded: Rodent-Only Consensus</span>
-                                        </div>
+                            <!-- Custom PodLens Streaming Telemetry Graphic -->
+                            <div class="podlens-graphic-wrap">
+                                <!-- Audio Stream & Waveform Spectrum -->
+                                <div class="podlens-audio-bar">
+                                    <div class="audio-stream-meta font-mono">
+                                        <span class="stream-state"><span class="stream-dot"></span>STREAMING AUDIO</span>
+                                        <span class="stream-time">00:14:32 / 01:12:05</span>
+                                    </div>
+                                    <div class="podlens-waveform" aria-hidden="true">
+                                        <span class="wave-bar b-1"></span>
+                                        <span class="wave-bar b-2"></span>
+                                        <span class="wave-bar b-3"></span>
+                                        <span class="wave-bar b-4"></span>
+                                        <span class="wave-bar b-5"></span>
+                                        <span class="wave-bar b-6"></span>
+                                        <span class="wave-bar b-7"></span>
+                                        <span class="wave-bar b-8"></span>
+                                        <span class="wave-bar b-9"></span>
+                                        <span class="wave-bar b-10"></span>
+                                        <span class="wave-bar b-11"></span>
+                                        <span class="wave-bar b-12"></span>
+                                        <span class="wave-bar b-13"></span>
+                                        <span class="wave-bar b-14"></span>
+                                        <span class="wave-bar b-15"></span>
+                                        <span class="wave-bar b-16"></span>
+                                        <span class="wave-bar b-17"></span>
+                                        <span class="wave-bar b-18"></span>
+                                        <span class="wave-bar b-19"></span>
+                                        <span class="wave-bar b-20"></span>
+                                        <span class="wave-bar b-21"></span>
+                                        <span class="wave-bar b-22"></span>
+                                    </div>
+                                </div>
+
+                                <!-- Detected Claim Card -->
+                                <div class="podlens-claim-box">
+                                    <div class="claim-header font-mono">
+                                        <span class="claim-tag"><span class="chip-dot yellow"></span>EXTRACTED CLAIM [14:38]</span>
+                                        <span class="claim-latency">sub-2s latency</span>
+                                    </div>
+                                    <p class="claim-quote">
+                                        &ldquo;16 hours of daily fasting completely triggers cellular autophagy in humans&rdquo;
+                                    </p>
+                                </div>
+
+                                <!-- Grounding Verification Resolution Card -->
+                                <div class="podlens-evidence-box">
+                                    <div class="evidence-header font-mono">
+                                        <span class="ground-tag"><span class="chip-dot green"></span>GROUNDED CONSENSUS</span>
+                                        <span class="evidence-verdict">RODENT-ONLY EVIDENCE</span>
+                                    </div>
+                                    <p class="evidence-summary">
+                                        Autophagy reliably observed in murine models; human randomized trials show metabolic shifts with non-significant cellular turnover.
+                                    </p>
+                                    <div class="evidence-citations font-mono">
+                                        <span class="cite-pill">PubMed: 32822452</span>
+                                        <span class="cite-pill">DOI: 10.1056/NEJM</span>
+                                        <span class="credibility-badge">91% MATCH</span>
                                     </div>
                                 </div>
                             </div>
