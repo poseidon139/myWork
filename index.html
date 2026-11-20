@@ -891,7 +891,7 @@
                                 <md-outlined-text-field
                                     type="email"
                                     id="contact-email"
-                                    name="_replyto"
+                                    name="email"
                                     label="Your Email"
                                     placeholder="name@example.com"
                                     required>
@@ -911,9 +911,12 @@
                                     <md-icon slot="leading-icon">chat</md-icon>
                                 </md-outlined-text-field>
                             </div>
-                            <md-filled-button type="submit" class="w-100 hero-btn-primary">
+
+                            <div id="contact-form-status" class="contact-status-banner mb-3" style="display: none;" role="alert"></div>
+
+                            <md-filled-button type="submit" id="contact-submit-btn" class="w-100 hero-btn-primary">
                                 <md-icon slot="icon">send</md-icon>
-                                Send Message
+                                <span id="contact-btn-text">Send Message</span>
                             </md-filled-button>
                         </form>
                     </div>

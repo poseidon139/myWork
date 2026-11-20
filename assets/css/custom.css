@@ -2509,6 +2509,38 @@ md-outlined-text-field {
   width: 100%;
   display: block;
 }
+
+/* Contact Form Status Banner */
+.contact-status-banner {
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  transition: all 0.3s ease;
+}
+
+.contact-status-banner.status-success {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.contact-status-banner.status-error {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+}
+
+body:not(.dark-theme) .contact-status-banner.status-success {
+  background: #ecfdf5;
+  color: #047857;
+  border-color: #a7f3d0;
+}
+
+body:not(.dark-theme) .contact-status-banner.status-error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border-color: #fecaca;
 }
 
 .contact-infos .contact-icon-box md-icon {

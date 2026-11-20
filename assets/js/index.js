@@ -62,36 +62,90 @@ $(document).ready(function(){
 		});
 	}
 
-	// Contact Form submission handler for Material Web text fields
+	// Contact Form submission handler for Material Web text fields & Formspree AJAX
 	var $contactForm = $('#contact-form');
 	if ($contactForm.length) {
-		$contactForm.on('submit', function(e) {
+		$contactForm.on('submit', async function(e) {
+			e.preventDefault();
+
 			var emailEl = document.getElementById('contact-email');
 			var messageEl = document.getElementById('contact-message');
+			var $statusBanner = $('#contact-form-status');
+			var $submitBtn = $('#contact-submit-btn');
+			var $btnText = $('#contact-btn-text');
 
-			if (emailEl && !emailEl.value) {
-				e.preventDefault();
-				emailEl.focus();
-				return false;
-			}
-			if (messageEl && !messageEl.value) {
-				e.preventDefault();
-				messageEl.focus();
-				return false;
+			var emailVal = emailEl ? (emailEl.value || '').trim() : '';
+			var messageVal = messageEl ? (messageEl.value || '').trim() : '';
+
+			function showStatus(msg, type) {
+				$statusBanner
+					.removeClass('status-success status-error')
+					.addClass('status-' + type)
+					.text(msg)
+					.fadeIn(200);
 			}
 
-			// Ensure standard form inputs exist for native POST
-			var $hiddenEmail = $contactForm.find('input[name="_replyto"][type="hidden"]');
-			if (!$hiddenEmail.length) {
-				$hiddenEmail = $('<input type="hidden" name="_replyto">').appendTo($contactForm);
+			// Client-side validation
+			if (!emailVal) {
+				showStatus('Please enter your email address.', 'error');
+				if (emailEl) emailEl.focus();
+				return;
 			}
-			$hiddenEmail.val(emailEl ? emailEl.value : '');
 
-			var $hiddenMsg = $contactForm.find('input[name="message"][type="hidden"]');
-			if (!$hiddenMsg.length) {
-				$hiddenMsg = $('<input type="hidden" name="message">').appendTo($contactForm);
+			var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			if (!emailRegex.test(emailVal)) {
+				showStatus('Please enter a valid email address.', 'error');
+				if (emailEl) emailEl.focus();
+				return;
 			}
-			$hiddenMsg.val(messageEl ? messageEl.value : '');
+
+			if (!messageVal) {
+				showStatus('Please enter a message before sending.', 'error');
+				if (messageEl) messageEl.focus();
+				return;
+			}
+
+			// Update button to sending state
+			$submitBtn.prop('disabled', true);
+			if ($btnText.length) {
+				$btnText.text('Sending...');
+			}
+			$statusBanner.hide().removeClass('status-success status-error');
+
+			try {
+				var actionUrl = $contactForm.attr('action') || 'https://formspree.io/f/mzzzkrlk';
+				var response = await fetch(actionUrl, {
+					method: 'POST',
+					headers: {
+						'Accept': 'application/json',
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						email: emailVal,
+						message: messageVal
+					})
+				});
+
+				if (response.ok) {
+					showStatus('✓ Thank you! Your message has been sent successfully.', 'success');
+					if (emailEl) emailEl.value = '';
+					if (messageEl) messageEl.value = '';
+				} else {
+					var data = await response.json().catch(function() { return {}; });
+					var errorMsg = 'Oops! There was a problem submitting your form.';
+					if (data && data.errors && data.errors.length) {
+						errorMsg = data.errors.map(function(err) { return err.message; }).join(', ');
+					}
+					showStatus(errorMsg + ' You can also email me directly at suryavardhan261@gmail.com.', 'error');
+				}
+			} catch (err) {
+				showStatus('Could not send message. Please check your network connection or email me at suryavardhan261@gmail.com.', 'error');
+			} finally {
+				$submitBtn.prop('disabled', false);
+				if ($btnText.length) {
+					$btnText.text('Send Message');
+				}
+			}
 		});
 	}
 });
