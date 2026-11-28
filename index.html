@@ -102,19 +102,19 @@
     <header class="header" id="home">
         <div class="container">
             <div class="row align-items-center">
-                <!-- Left: Core Value Proposition & Primary Actions -->
+                <!-- Left: Core Introduction & Primary Actions -->
                 <div class="col-lg-7 pr-lg-5 text-left">
                     <div class="hero-eyebrow-wrapper">
                         <span class="status-live-dot"></span>
-                        <span class="hero-eyebrow-text">Surya Vardhan &middot; Systems &amp; Full-Stack Engineer</span>
+                        <span class="hero-eyebrow-text">Surya Vardhan &middot; Software Developer &middot; Bengaluru</span>
                     </div>
-                    <h1 class="hero-title">I build reliable systems and thoughtful digital experiences.</h1>
-                    <p class="hero-lead">Specializing in real-time WebSockets, high-throughput distributed backends with Node.js and Java, and containerized cloud services with Kubernetes.</p>
+                    <h1 class="hero-title">I build fast, reliable web systems and developer tools.</h1>
+                    <p class="hero-lead">Software engineer focused on distributed backends, WebSocket architectures, and practical cloud services. I like solving performance puzzles, designing clean APIs, and shipping tools that make people's lives easier.</p>
                     
                     <div class="hero-actions d-flex flex-wrap align-items-center gap-3">
                         <md-filled-button href="#portfolio" class="hero-btn-primary">
                             <md-icon slot="icon">arrow_downward</md-icon>
-                            View Selected Work
+                            Explore Projects
                         </md-filled-button>
                         <md-outlined-button href="#contact" class="hero-btn-secondary">
                             <md-icon slot="icon">mail</md-icon>
@@ -147,56 +147,37 @@
                     </div>
                 </div>
 
-                <!-- Right: Flagship Project Live Preview & Telemetry Card -->
+                <!-- Right: Authentic Developer Card -->
                 <div class="col-lg-5 mt-5 mt-lg-0">
-                    <div class="hero-project-preview m3-card">
-                        <md-elevation></md-elevation>
-                        <div class="preview-header d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center gap-2">
-                                <span class="preview-dot dot-red"></span>
-                                <span class="preview-dot dot-yellow"></span>
-                                <span class="preview-dot dot-green"></span>
-                                <span class="preview-title ml-2">sys.telemetry :: roamthecity.k8s</span>
+                    <div class="hero-code-card">
+                        <div class="code-card-header">
+                            <div class="window-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
                             </div>
-                            <span class="preview-badge live">ONLINE</span>
+                            <span class="code-card-filename">surya.config.ts</span>
+                            <span class="code-card-badge">Available</span>
                         </div>
-                        <div class="preview-body">
-                            <div class="preview-radar-container">
-                                <div class="radar-grid"></div>
-                                <div class="radar-scan"></div>
-                                <div class="district-node node-1" title="Downtown Zone">
-                                    <span class="node-pulse"></span>
-                                    <span>Zone 01 / Downtown</span>
-                                </div>
-                                <div class="district-node node-2" title="Central Hub">
-                                    <span class="node-pulse"></span>
-                                    <span>Zone 02 / Central Hub</span>
-                                </div>
-                                <div class="district-node node-3" title="Waterfront Zone">
-                                    <span class="node-pulse"></span>
-                                    <span>Zone 03 / Waterfront</span>
-                                </div>
+                        <div class="code-card-body">
+                            <pre><code><span class="token-keyword">const</span> <span class="token-variable">developer</span> = {
+  <span class="token-property">name</span>: <span class="token-string">"Surya Vardhan"</span>,
+  <span class="token-property">location</span>: <span class="token-string">"Bengaluru, India"</span>,
+  <span class="token-property">role</span>: <span class="token-string">"Full-Stack &amp; Systems Engineer"</span>,
+  <span class="token-property">stack</span>: [<span class="token-string">"TypeScript"</span>, <span class="token-string">"Node.js"</span>, <span class="token-string">"Python"</span>, <span class="token-string">"Java"</span>, <span class="token-string">"PostgreSQL"</span>],
+  <span class="token-property">interests</span>: [<span class="token-string">"Distributed systems"</span>, <span class="token-string">"WebSockets"</span>, <span class="token-string">"Real-time AI"</span>],
+  <span class="token-property">latestWork</span>: <span class="token-string">"PodLens (CiteCast)"</span>,
+  <span class="token-property">openTo</span>: <span class="token-string">"Full-time roles &amp; select contracts"</span>
+};</code></pre>
+                        </div>
+                        <div class="code-card-footer">
+                            <div class="code-footer-status">
+                                <span class="code-footer-dot"></span>
+                                <span>IST &middot; UTC+5:30</span>
                             </div>
-                            <div class="preview-stats">
-                                <div class="stat-col">
-                                    <span class="stat-label">FLAGSHIP</span>
-                                    <span class="stat-val font-weight-bold">Roam The City</span>
-                                </div>
-                                <div class="stat-col">
-                                    <span class="stat-label">LATENCY</span>
-                                    <span class="stat-val font-weight-bold text-success font-mono">&lt; 32ms</span>
-                                </div>
-                                <div class="stat-col">
-                                    <span class="stat-label">ORCHESTRATION</span>
-                                    <span class="stat-val font-mono">k8s-prod</span>
-                                </div>
-                            </div>
-                            <div class="preview-footer pt-3 d-flex justify-content-between align-items-center">
-                                <span class="small text-muted font-mono">WebSocket Sync Active</span>
-                                <a href="https://roamthecity.com" target="_blank" rel="noopener noreferrer" class="preview-link">
-                                    Launch Live App &rarr;
-                                </a>
-                            </div>
+                            <a href="#portfolio" class="code-footer-link">
+                                View selected projects &darr;
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -210,67 +191,62 @@
         <div class="container text-left">
             <div class="section-header">
                 <div class="section-tag">
-                    <span class="section-num">01</span>
+                    <span class="section-bullet">&bull;</span>
                     <span class="section-name">SELECTED WORK</span>
                 </div>
-                <h2 class="section-title">Built with intent. Tested under load.</h2>
-                <p class="section-desc">A curated selection of distributed web applications, systems tools, and machine learning utilities demonstrating architectural decisions and verified results.</p>
+                <h2 class="section-title">Things I've Built &amp; Shipped</h2>
+                <p class="section-desc">A selection of real-time multiplayer systems, AI verification pipelines, and systems utilities exploring distributed performance and reliability.</p>
             </div>
 
             <!-- Featured Project 1: Roam The City (Full-width Lead Spotlight) -->
             <article class="lead-project-card m3-card">
                 <md-elevation></md-elevation>
                 <div class="row align-items-center">
-                    <!-- Visual & Spatial Radar -->
+                    <!-- Visual: Live Spatial Grid Viewport -->
                     <div class="col-lg-6 mb-4 mb-lg-0">
                         <div class="lead-project-visual">
                             <div class="map-visual-header">
                                 <span class="live-multiplayer-pill font-mono"><span class="live-pulse"></span>LIVE MULTIPLAYER</span>
                                 <span class="font-mono small text-muted">&bull; roamthecity.com</span>
                             </div>
-                            <div class="map-visual-center text-center">
-                                <div class="preview-radar-container w-100 h-100 m-0">
-                                    <div class="radar-grid"></div>
-                                    <div class="radar-scan"></div>
-                                    <div class="district-node node-1" style="top: 18%; left: 16%;">
-                                        <span class="node-pulse"></span>
-                                        <span>District A / North</span>
-                                    </div>
-                                    <div class="district-node node-2" style="top: 52%; right: 14%;">
-                                        <span class="node-pulse"></span>
-                                        <span>District B / Market</span>
-                                    </div>
-                                    <div class="district-node node-3" style="bottom: 18%; left: 36%;">
-                                        <span class="node-pulse"></span>
-                                        <span>District C / Marina</span>
-                                    </div>
+                            <div class="spatial-grid-viewport">
+                                <div class="spatial-grid-lines"></div>
+                                <span class="spatial-coords-overlay">37.7749&deg; N, 122.4194&deg; W &middot; Sector 04-B</span>
+                                <div class="spatial-player-node" style="top: 26%; left: 22%;">
+                                    <span class="player-dot active"></span>
+                                    <span>@surya (host)</span>
                                 </div>
+                                <div class="spatial-player-node" style="top: 56%; right: 18%;">
+                                    <span class="player-dot peer-1"></span>
+                                    <span>@marcus</span>
+                                </div>
+                                <div class="spatial-player-node" style="bottom: 22%; left: 42%;">
+                                    <span class="player-dot peer-2"></span>
+                                    <span>@elena_k</span>
+                                </div>
+                                <span class="spatial-sector-badge">Active Sockets: 142</span>
                             </div>
                             <div class="map-visual-footer">
-                                <span>Real-World Map Coordinates</span>
-                                <span class="text-success">&bull; Zone State: Synchronized</span>
+                                <span>Spatial Zone Partitioning</span>
+                                <span class="text-success font-mono">&bull; Latency: ~28ms</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Narrative & Technical Breakdown -->
                     <div class="col-lg-6 pl-lg-4">
-                        <span class="lead-feature-tag">FLAGSHIP LEAD PROJECT &middot; DISTRIBUTED ARCHITECTURE</span>
+                        <span class="lead-feature-tag">REAL-TIME MULTIPLAYER &middot; SPATIAL SYSTEMS</span>
                         <h3 class="h2 font-weight-bold mb-3" style="color: var(--text-primary);">Roam The City</h3>
                         
-                        <div class="project-case-grid">
-                            <div class="case-point">
-                                <h5>The Problem</h5>
-                                <p>Multiplayer spatial applications often degrade in performance as hundreds of users send continuous movement updates across an unpartitioned global socket room.</p>
-                            </div>
-                            <div class="case-point">
-                                <h5>Architecture &amp; Technical Decision</h5>
-                                <p>Engineered a localized zone-partitioning model using Socket.IO rooms, Node.js, and PostgreSQL with stateless JWT tokens. Containerized with Docker and orchestrated with Kubernetes to enable horizontal pod autoscaling under user surges.</p>
-                            </div>
-                            <div class="case-point">
-                                <h5>Verified Result &amp; Lesson</h5>
-                                <p>Guaranteed sub-50ms message sync and zero-drop player handoffs across adjacent geographical sectors without overloading client memory.</p>
-                            </div>
+                        <p class="project-summary-text" style="color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.25rem;">
+                            An interactive multiplayer city exploration game where players wander real-world map coordinates in real time. Built to push the boundaries of browser-based concurrency without heavy standalone game engines.
+                        </p>
+
+                        <div class="project-insight-card mb-3" style="background: var(--bg-card-hover); border: 1px solid var(--border-glass); border-radius: 10px; padding: 1rem 1.2rem;">
+                            <h6 style="font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-1); margin-bottom: 0.4rem; font-family: var(--font-mono);">Engineering Insight</h6>
+                            <p style="font-size: 0.92rem; color: var(--text-secondary); margin: 0; line-height: 1.55;">
+                                When hundreds of players move continuously, a naive global socket room quickly saturates client bandwidth and CPU. I implemented localized spatial grid partitioning using Socket.IO rooms—chunking coordinates into sectors so players only receive broadcast deltas from neighbors in their active viewport, holding latency under 50ms.
+                            </p>
                         </div>
 
                         <div class="tech-pill-set">
@@ -304,7 +280,7 @@
                     <div class="col-lg-6 mb-4 mb-lg-0 order-1 order-lg-2">
                         <div class="lead-project-visual podlens-visual">
                             <div class="map-visual-header">
-                                <span class="live-grounding-pill font-mono"><span class="live-pulse"></span>LIVE STREAM GROUNDING</span>
+                                <span class="live-grounding-pill font-mono"><span class="live-pulse"></span>STREAMING VERIFICATION</span>
                                 <span class="font-mono small text-muted">&bull; Cloud Run :: us-central1</span>
                             </div>
                             <!-- Custom PodLens Streaming Telemetry Graphic -->
@@ -312,7 +288,7 @@
                                 <!-- Audio Stream & Waveform Spectrum -->
                                 <div class="podlens-audio-bar">
                                     <div class="audio-stream-meta font-mono">
-                                        <span class="stream-state"><span class="stream-dot"></span>STREAMING AUDIO</span>
+                                        <span class="stream-state"><span class="stream-dot"></span>EPISODE AUDIO STREAM</span>
                                         <span class="stream-time">00:14:32 / 01:12:05</span>
                                     </div>
                                     <div class="podlens-waveform" aria-hidden="true">
@@ -344,8 +320,8 @@
                                 <!-- Detected Claim Card -->
                                 <div class="podlens-claim-box">
                                     <div class="claim-header font-mono">
-                                        <span class="claim-tag"><span class="chip-dot yellow"></span>EXTRACTED CLAIM [14:38]</span>
-                                        <span class="claim-latency">sub-2s latency</span>
+                                        <span class="claim-tag"><span class="chip-dot yellow"></span>CLAIM DETECTED [14:38]</span>
+                                        <span class="claim-latency">~1.4s extraction</span>
                                     </div>
                                     <p class="claim-quote">
                                         &ldquo;16 hours of daily fasting completely triggers cellular autophagy in humans&rdquo;
@@ -355,44 +331,40 @@
                                 <!-- Grounding Verification Resolution Card -->
                                 <div class="podlens-evidence-box">
                                     <div class="evidence-header font-mono">
-                                        <span class="ground-tag"><span class="chip-dot green"></span>GROUNDED CONSENSUS</span>
-                                        <span class="evidence-verdict">RODENT-ONLY EVIDENCE</span>
+                                        <span class="ground-tag"><span class="chip-dot green"></span>GROUNDED EVIDENCE</span>
+                                        <span class="evidence-verdict">ANIMAL MODELS ONLY</span>
                                     </div>
                                     <p class="evidence-summary">
-                                        Autophagy reliably observed in murine models; human randomized trials show metabolic shifts with non-significant cellular turnover.
+                                        Cellular autophagy reliably confirmed in murine trials; human randomized studies show metabolic regulation but non-significant turnover.
                                     </p>
                                     <div class="evidence-citations font-mono">
                                         <span class="cite-pill">PubMed: 32822452</span>
                                         <span class="cite-pill">DOI: 10.1056/NEJM</span>
-                                        <span class="credibility-badge">91% MATCH</span>
+                                        <span class="credibility-badge">CITATIONS VERIFIED</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="map-visual-footer">
-                                <span>Gemini 1.5 Flash + Google Search Tool</span>
-                                <span class="text-success font-mono">&bull; Credibility Score: 91%</span>
+                                <span>Gemini 1.5 Flash + Search Grounding</span>
+                                <span class="text-success font-mono">&bull; WebSocket Stream Active</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Narrative & Technical Breakdown -->
                     <div class="col-lg-6 pr-lg-4 order-2 order-lg-1">
-                        <span class="lead-feature-tag" style="color: #818cf8;">FLAGSHIP AI PROJECT &middot; REAL-TIME GROUNDING</span>
+                        <span class="lead-feature-tag" style="color: #818cf8;">STREAMING AI &middot; FACT-CHECKING</span>
                         <h3 class="h2 font-weight-bold mb-3" style="color: var(--text-primary);">PodLens (CiteCast)</h3>
                         
-                        <div class="project-case-grid">
-                            <div class="case-point">
-                                <h5>The Problem</h5>
-                                <p>Long-form video podcasts are the world's most consumed educational medium, yet they frequently spread unverified assertions, misrepresented statistics, and animal studies falsely generalized to humans without live citations.</p>
-                            </div>
-                            <div class="case-point">
-                                <h5>Architecture &amp; Technical Decision</h5>
-                                <p>Architected an asynchronous streaming verification engine on Google Cloud Run using Pub/Sub for 30s audio chunking and Gemini 1.5 Flash with Google Search Grounding to distinguish banter from empirical claims. Synchronized timecoded claim cards over WebSockets directly to the video player timeline.</p>
-                            </div>
-                            <div class="case-point">
-                                <h5>Verified Result &amp; Lesson</h5>
-                                <p>Delivered sub-2s claim extraction and verification with primary academic literature citations (DOIs, PubMed) and automated 91%+ credibility dossiers across 60+ minute podcast episodes.</p>
-                            </div>
+                        <p class="project-summary-text" style="color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.25rem;">
+                            A real-time fact-checking companion for podcasts and educational video. While listening, PodLens extracts empirical assertions and verifies them against indexed scientific literature and Google Search Grounding.
+                        </p>
+
+                        <div class="project-insight-card mb-3" style="background: var(--bg-card-hover); border: 1px solid var(--border-glass); border-radius: 10px; padding: 1rem 1.2rem;">
+                            <h6 style="font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #818cf8; margin-bottom: 0.4rem; font-family: var(--font-mono);">Engineering Insight</h6>
+                            <p style="font-size: 0.92rem; color: var(--text-secondary); margin: 0; line-height: 1.55;">
+                                Running models over continuous audio streams is cost and latency prohibitive. I chunked audio into 30-second sliding buffers on Google Cloud Run, using Gemini 1.5 Flash to filter conversational banter from testable claims. Retrieved citations (PubMed IDs, DOIs) stream back over WebSockets directly onto the video player timeline in under 2 seconds.
+                            </p>
                         </div>
 
                         <div class="tech-pill-set">
@@ -403,7 +375,6 @@
                             <span class="tech-pill">FastAPI</span>
                             <span class="tech-pill">Python</span>
                             <span class="tech-pill">React</span>
-                            <span class="tech-pill">Cloud Firestore</span>
                             <span class="tech-pill">WebSockets</span>
                         </div>
 
@@ -436,7 +407,7 @@
                                     <span class="dot green"></span>
                                     <span class="graphic-title font-mono">git diff :: auth_service.py</span>
                                 </div>
-                                <span class="graphic-badge badge-pass font-mono">AST &middot; PASS (3/3)</span>
+                                <span class="graphic-badge badge-pass font-mono">PR #42 &middot; Review</span>
                             </div>
                             <div class="pr-graphic-body">
                                 <div class="pr-diff-lines font-mono">
@@ -455,10 +426,10 @@
                                     <div class="bot-header">
                                         <span class="bot-avatar">🤖</span>
                                         <span class="bot-name font-mono">ai-reviewer-bot</span>
-                                        <span class="bot-time font-mono">inline ast review</span>
+                                        <span class="bot-time font-mono">inline suggestion</span>
                                     </div>
                                     <p class="bot-msg">
-                                        Replaced insecure token lookup with RS256 cryptographic verification. Generated unit test in tests/auth_test.py.
+                                        Replaced insecure raw token retrieval with RS256 cryptographic verification. Added test cases in tests/auth_test.py.
                                     </p>
                                 </div>
                             </div>
@@ -467,19 +438,15 @@
                             <span class="lead-feature-tag">AUTOMATION &middot; DEVELOPER TOOLING</span>
                             <h3 class="h3 font-weight-bold mb-2">AI Pull Request Review</h3>
                             
-                            <div class="project-case-grid">
-                                <div class="case-point">
-                                    <h5>The Problem</h5>
-                                    <p>Repetitive linting, style disputes, and edge-case syntax bugs slow down peer review cycles and introduce human fatigue.</p>
-                                </div>
-                                <div class="case-point">
-                                    <h5>Technical Decision</h5>
-                                    <p>Built a webhook-driven bot in Python that parses AST diffs and chains OpenAI prompts with custom engineering context to publish targeted inline commentary.</p>
-                                </div>
-                                <div class="case-point">
-                                    <h5>Verified Result</h5>
-                                    <p>Cut mechanical review turnaround by ~60% while providing engineers with automated unit-test recommendations.</p>
-                                </div>
+                            <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem; font-size: 0.94rem;">
+                                A webhook-driven GitHub bot that analyzes pull request diffs using AST parsing and OpenAI APIs to catch security flaws, missing tests, and edge-case syntax bugs before peer review.
+                            </p>
+                            
+                            <div class="project-insight-card mb-3" style="background: var(--bg-card-hover); border: 1px solid var(--border-glass); border-radius: 8px; padding: 0.85rem 1rem;">
+                                <h6 style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-1); margin-bottom: 0.3rem; font-family: var(--font-mono);">Engineering Insight</h6>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">
+                                    Rather than running naive string prompts over entire files, the service breaks diffs into AST nodes to pinpoint exactly which functions changed. It spots vulnerabilities like unverified JWT headers and generates drop-in unit tests inline.
+                                </p>
                             </div>
 
                             <div class="tech-pill-set">
@@ -512,7 +479,7 @@
                                     <span class="dot green"></span>
                                     <span class="graphic-title font-mono">stream_01 :: 1080p60 &middot; OpenCV</span>
                                 </div>
-                                <span class="graphic-badge badge-live font-mono"><span class="live-pulse"></span>LIVE SCAN</span>
+                                <span class="graphic-badge badge-live font-mono"><span class="live-pulse"></span>LIVENESS SCAN</span>
                             </div>
                             <div class="cv-graphic-body">
                                 <div class="cv-reticle-container">
@@ -534,26 +501,26 @@
                                             <line x1="43" y1="69" x2="57" y2="69" stroke="#38bdf8" stroke-width="1.5" />
                                         </svg>
                                         
-                                        <span class="cv-target-label font-mono">FACE_01</span>
+                                        <span class="cv-target-label font-mono">SUBJECT_01</span>
                                     </div>
                                 </div>
                                 
                                 <div class="cv-telemetry-feed font-mono">
                                     <div class="cv-metric">
-                                        <span class="metric-name">Fourier Texture</span>
-                                        <span class="metric-val pass">98.4% NATURAL</span>
+                                        <span class="metric-name">Texture FFT</span>
+                                        <span class="metric-val pass">NATURAL GRAIN</span>
                                     </div>
                                     <div class="cv-metric">
-                                        <span class="metric-name">Reflection Grad</span>
-                                        <span class="metric-val pass">SPECULAR (REAL)</span>
+                                        <span class="metric-name">Specular Glare</span>
+                                        <span class="metric-val pass">3D CURVATURE</span>
                                     </div>
                                     <div class="cv-metric">
-                                        <span class="metric-name">Micro-Blink</span>
-                                        <span class="metric-val pass">1.2s CADENCE</span>
+                                        <span class="metric-name">Blink Rhythm</span>
+                                        <span class="metric-val pass">ORGANIC CADENCE</span>
                                     </div>
                                     <div class="cv-verdict-pill">
-                                        <span class="verdict-label">STATUS</span>
-                                        <span class="verdict-val font-weight-bold">AUTHENTIC (96.8%)</span>
+                                        <span class="verdict-label">VERDICT</span>
+                                        <span class="verdict-val font-weight-bold">LIVE HUMAN (96.8%)</span>
                                     </div>
                                 </div>
                             </div>
@@ -562,19 +529,15 @@
                             <span class="lead-feature-tag">COMPUTER VISION &middot; SECURITY</span>
                             <h3 class="h3 font-weight-bold mb-2">Anti-Face Spoofing Software</h3>
                             
-                            <div class="project-case-grid">
-                                <div class="case-point">
-                                    <h5>The Problem</h5>
-                                    <p>Standard biometric identity systems are frequently bypassed by high-resolution printed photos and digital screen replays.</p>
-                                </div>
-                                <div class="case-point">
-                                    <h5>Technical Decision</h5>
-                                    <p>Trained a hybrid OpenCV deep learning model evaluating Fourier frequency texture discrepancies, eye-blink cadences, and surface reflection gradients.</p>
-                                </div>
-                                <div class="case-point">
-                                    <h5>Verified Result</h5>
-                                    <p>Maintained &gt;94% spoof rejection accuracy in real-time camera streams across unpredictable ambient lighting.</p>
-                                </div>
+                            <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem; font-size: 0.94rem;">
+                                Real-time biometric liveness verification designed to protect facial authentication systems from presentation attacks using printed photos, video loops, and digital screens.
+                            </p>
+                            
+                            <div class="project-insight-card mb-3" style="background: var(--bg-card-hover); border: 1px solid var(--border-glass); border-radius: 8px; padding: 0.85rem 1rem;">
+                                <h6 style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-1); margin-bottom: 0.3rem; font-family: var(--font-mono);">Engineering Insight</h6>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">
+                                    Standard 2D facial models can't distinguish real skin from an iPad screen. This hybrid OpenCV and deep learning pipeline extracts Fourier frequency distributions to catch screen moiré patterns, tracking natural micro-blinks and surface reflections to maintain &gt;94% spoof rejection.
+                                </p>
                             </div>
 
                             <div class="tech-pill-set">
@@ -598,7 +561,7 @@
             <!-- Compact More Projects Section -->
             <div class="compact-heading">
                 <md-icon style="color: var(--accent-1); font-size: 22px;">terminal</md-icon>
-                <span>Additional Projects &amp; Systems</span>
+                <span>Other Projects &amp; Experiments</span>
             </div>
             
             <div class="more-projects-grid">
@@ -606,11 +569,11 @@
                     <md-elevation></md-elevation>
                     <div>
                         <h4>LAN Chat Software</h4>
-                        <p>Low-level multithreaded TCP socket chat engine with zero third-party brokers for local peer discovery.</p>
+                        <p>Peer-to-peer TCP chat tool built in Java using raw sockets and multithreading. Discovers and messages peers across a local network without internet access or external brokers.</p>
                         <div class="tech-pill-set mb-3">
                             <span class="tech-pill">Java</span>
                             <span class="tech-pill">TCP/IP Sockets</span>
-                            <span class="tech-pill">Concurrency</span>
+                            <span class="tech-pill">Multithreading</span>
                         </div>
                     </div>
                     <md-text-button href="https://github.com/poseidon139/lanChat" target="_blank" rel="noopener noreferrer" trailing-icon>
@@ -621,8 +584,8 @@
                 <div class="compact-project-card m3-card">
                     <md-elevation></md-elevation>
                     <div>
-                        <h4>CI Pipeline Quality Control</h4>
-                        <p>Automated build verification, static code analysis, and SonarQube quality gatekeeping for production releases.</p>
+                        <h4>CI Pipeline Quality Gate</h4>
+                        <p>A containerized Jenkins pipeline integrating SonarQube static code analysis, automated test runs, and Docker build artifacting before staging releases.</p>
                         <div class="tech-pill-set mb-3">
                             <span class="tech-pill">Jenkins</span>
                             <span class="tech-pill">Docker</span>
@@ -637,8 +600,8 @@
                 <div class="compact-project-card m3-card">
                     <md-elevation></md-elevation>
                     <div>
-                        <h4>Weather Updates on Feature Phone</h4>
-                        <p>Low-bandwidth weather delivery platform parsing meteorological APIs and dispatching concise SMS alerts to non-smartphones.</p>
+                        <h4>SMS Weather for Feature Phones</h4>
+                        <p>A lightweight notification engine delivering concise meteorological forecasts over SMS to users without smartphones or mobile data plans.</p>
                         <div class="tech-pill-set mb-3">
                             <span class="tech-pill">Node.js</span>
                             <span class="tech-pill">SMS Gateway</span>
@@ -653,8 +616,8 @@
                 <div class="compact-project-card m3-card">
                     <md-elevation></md-elevation>
                     <div>
-                        <h4>Full-Stack Task Manager</h4>
-                        <p>High-responsiveness task tracking workspace with JWT authentication, optimized schema queries, and reactive UI updates.</p>
+                        <h4>Full-Stack Task Workspace</h4>
+                        <p>A responsive task board with JWT authentication, optimistic UI updates, and MongoDB persistence designed for fast daily planning.</p>
                         <div class="tech-pill-set mb-3">
                             <span class="tech-pill">React</span>
                             <span class="tech-pill">Node.js</span>
@@ -676,50 +639,50 @@
         <div class="container text-left">
             <div class="section-header">
                 <div class="section-tag">
-                    <span class="section-num">02</span>
-                    <span class="section-name">ABOUT &amp; CAPABILITIES</span>
+                    <span class="section-bullet">&bull;</span>
+                    <span class="section-name">ABOUT ME</span>
                 </div>
-                <h2 class="section-title">Engineering with rigor &amp; curiosity.</h2>
-                <p class="section-desc">Practical full-stack development grounded in computer science fundamentals and resilient cloud infrastructure.</p>
+                <h2 class="section-title">Background &amp; Philosophy</h2>
+                <p class="section-desc">A bit about my journey, what I value when building software, and the technologies I use day-to-day.</p>
             </div>
 
             <div class="row">
                 <!-- Left: Narrative & Core Engineering Philosophy -->
                 <div class="col-lg-6 pr-lg-5 mb-5 mb-lg-0">
                     <p class="about-lead-text">
-                        I'm a software developer based in India with ~3 years of experience engineering scalable web systems, backend services, and automated CI/CD pipelines.
+                        I'm a software developer based in Bengaluru with ~3 years of experience building reliable web backends, distributed systems, and practical developer utilities.
                     </p>
                     <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
-                        My engineering approach is built around simplicity, defensive design, and maintainability. Rather than choosing complex frameworks for their own sake, I focus on what makes software dependable: low-latency data flow, well-structured API contracts, and automated validation under real-world failure modes.
+                        I've always been drawn to the plumbing of software—understanding how packets flow over WebSockets, how databases scale under concurrent writes, and how to structure code so it stays easy to reason about months later. I believe in picking the right tool for the job, designing defensive APIs, and keeping developer velocity high through automated tests.
                     </p>
 
-                    <!-- 3 Engineering Pillars -->
+                    <!-- 3 Engineering Values -->
                     <div class="pillar-list">
                         <div class="pillar-item">
                             <div class="pillar-icon">
-                                <md-icon>shield</md-icon>
+                                <md-icon>check_circle</md-icon>
                             </div>
                             <div class="pillar-text">
-                                <h4>Reliability First</h4>
-                                <p>Fault-tolerant microservice boundaries, defensive data validation, and automated test suites that prevent regressions before reaching production.</p>
+                                <h4>Simplicity over cleverness</h4>
+                                <p>Clear, readable code is easier to debug, test, and hand off. The most reliable code is often the code you didn't have to write.</p>
                             </div>
                         </div>
                         <div class="pillar-item">
                             <div class="pillar-icon">
-                                <md-icon>bolt</md-icon>
+                                <md-icon>speed</md-icon>
                             </div>
                             <div class="pillar-text">
-                                <h4>Low Latency &amp; Scalability</h4>
-                                <p>Optimized database queries, streaming protocols via WebSockets, and lightweight containerization that scales horizontally under spikes.</p>
+                                <h4>Measure before optimizing</h4>
+                                <p>Real profiling beats guessing every time. I look for where latency actually lives—whether in network roundtrips, unindexed queries, or CPU serialization.</p>
                             </div>
                         </div>
                         <div class="pillar-item">
                             <div class="pillar-icon">
-                                <md-icon>code</md-icon>
+                                <md-icon>handyman</md-icon>
                             </div>
                             <div class="pillar-text">
-                                <h4>Maintainable Codebases</h4>
-                                <p>Clear architecture separation, predictable state management, and clear internal documentation that keeps developer velocity high.</p>
+                                <h4>Automate the repetitive</h4>
+                                <p>CI/CD pipelines, automated regression tests, and linters guard code quality so developers can spend their time on core architectural problems.</p>
                             </div>
                         </div>
                     </div>
@@ -730,37 +693,34 @@
                     <div class="skills-category-card m3-card">
                         <md-elevation></md-elevation>
                         <div class="category-header">
-                            <md-icon>dns</md-icon>
-                            <h4>Backend &amp; Distributed Systems</h4>
+                            <md-icon>code</md-icon>
+                            <h4>Programming Languages</h4>
                         </div>
                         <div class="tech-pill-set mb-0">
                             <span class="tech-pill">Java</span>
-                            <span class="tech-pill">Spring Boot</span>
-                            <span class="tech-pill">Node.js</span>
-                            <span class="tech-pill">Express.js</span>
                             <span class="tech-pill">Python</span>
-                            <span class="tech-pill">FastAPI</span>
+                            <span class="tech-pill">TypeScript</span>
+                            <span class="tech-pill">JavaScript (ES6+)</span>
                             <span class="tech-pill">C / C++</span>
-                            <span class="tech-pill">PostgreSQL</span>
-                            <span class="tech-pill">MySQL</span>
-                            <span class="tech-pill">MongoDB</span>
+                            <span class="tech-pill">SQL</span>
                         </div>
                     </div>
 
                     <div class="skills-category-card m3-card">
                         <md-elevation></md-elevation>
                         <div class="category-header">
-                            <md-icon>devices</md-icon>
-                            <h4>Frontend &amp; User Experience</h4>
+                            <md-icon>dns</md-icon>
+                            <h4>Backend &amp; Distributed Systems</h4>
                         </div>
                         <div class="tech-pill-set mb-0">
-                            <span class="tech-pill">React</span>
-                            <span class="tech-pill">Redux</span>
-                            <span class="tech-pill">JavaScript (ES6+)</span>
-                            <span class="tech-pill">HTML5 &amp; CSS3</span>
-                            <span class="tech-pill">Material Web Components</span>
-                            <span class="tech-pill">Vite</span>
-                            <span class="tech-pill">Responsive Design</span>
+                            <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">Express.js</span>
+                            <span class="tech-pill">Spring Boot</span>
+                            <span class="tech-pill">FastAPI</span>
+                            <span class="tech-pill">PostgreSQL</span>
+                            <span class="tech-pill">MySQL</span>
+                            <span class="tech-pill">MongoDB</span>
+                            <span class="tech-pill">Socket.IO &amp; WebSockets</span>
                         </div>
                     </div>
 
@@ -768,16 +728,15 @@
                         <md-elevation></md-elevation>
                         <div class="category-header">
                             <md-icon>cloud_sync</md-icon>
-                            <h4>DevOps, Cloud &amp; Infrastructure</h4>
+                            <h4>DevOps &amp; Cloud Infrastructure</h4>
                         </div>
                         <div class="tech-pill-set mb-0">
-                            <span class="tech-pill">Google Cloud Run</span>
-                            <span class="tech-pill">Vertex AI</span>
                             <span class="tech-pill">Docker</span>
                             <span class="tech-pill">Kubernetes</span>
+                            <span class="tech-pill">Google Cloud Run</span>
+                            <span class="tech-pill">Vertex AI</span>
                             <span class="tech-pill">AWS Services</span>
                             <span class="tech-pill">Jenkins CI/CD</span>
-                            <span class="tech-pill">SonarQube</span>
                             <span class="tech-pill">Linux Systems</span>
                             <span class="tech-pill">Git Workflows</span>
                         </div>
@@ -786,15 +745,15 @@
                     <div class="skills-category-card m3-card">
                         <md-elevation></md-elevation>
                         <div class="category-header">
-                            <md-icon>psychology</md-icon>
-                            <h4>Real-Time &amp; Specialized Capabilities</h4>
+                            <md-icon>devices</md-icon>
+                            <h4>Frontend &amp; Specialized Tooling</h4>
                         </div>
                         <div class="tech-pill-set mb-0">
-                            <span class="tech-pill">Gemini 1.5 Flash</span>
-                            <span class="tech-pill">Google Search Grounding</span>
-                            <span class="tech-pill">Socket.IO &amp; WebSockets</span>
+                            <span class="tech-pill">React</span>
+                            <span class="tech-pill">Redux</span>
+                            <span class="tech-pill">HTML5 &amp; CSS3</span>
+                            <span class="tech-pill">Vite</span>
                             <span class="tech-pill">OpenCV Computer Vision</span>
-                            <span class="tech-pill">Machine Learning</span>
                             <span class="tech-pill">RESTful API Design</span>
                             <span class="tech-pill">JWT Security</span>
                         </div>
@@ -810,11 +769,11 @@
         <div class="container text-left">
             <div class="section-header">
                 <div class="section-tag">
-                    <span class="section-num">03</span>
-                    <span class="section-name">WRITING &amp; INSIGHTS</span>
+                    <span class="section-bullet">&bull;</span>
+                    <span class="section-name">WRITING</span>
                 </div>
-                <h2 class="section-title">Thoughts on systems, AI, and development.</h2>
-                <p class="section-desc">Practical tutorials, architectural breakdowns, and field notes from building real-world software.</p>
+                <h2 class="section-title">Articles &amp; Field Notes</h2>
+                <p class="section-desc">Deep-dives on systems architecture, real-time networking, and lessons learned while building side projects.</p>
             </div>
             
             <div id="recent-articles" class="row">
@@ -839,11 +798,11 @@
         <div class="container text-left">
             <div class="section-header">
                 <div class="section-tag">
-                    <span class="section-num">04</span>
+                    <span class="section-bullet">&bull;</span>
                     <span class="section-name">GET IN TOUCH</span>
                 </div>
-                <h2 class="section-title">Let's build something dependable.</h2>
-                <p class="section-desc">Available for select engineering opportunities, freelance architecture, and full-time software engineering roles.</p>
+                <h2 class="section-title">Let's connect</h2>
+                <p class="section-desc">Whether you have an upcoming project, an engineering role, or just want to talk tech, feel free to reach out anytime.</p>
             </div>
 
             <div class="row">
@@ -853,7 +812,7 @@
                         <md-elevation></md-elevation>
                         <h3 class="h4 font-weight-bold mb-3">Direct Contact</h3>
                         <p class="text-muted">
-                            Whether you have an upcoming project, need architectural consulting, or want to discuss a full-time role, feel free to send an email or message.
+                            I'm always interested in hearing about interesting technical challenges, open-source projects, and new opportunities.
                         </p>
 
                         <div class="contact-highlight-box">
